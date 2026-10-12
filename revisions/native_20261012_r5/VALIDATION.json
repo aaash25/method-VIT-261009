@@ -1,0 +1,75 @@
+{
+  "state": "passed",
+  "archive_sha256": "77761b4d5dc6983211017720c4d8d36fd7b7dbdb169e4762f516ba42117a8317",
+  "qwen_restore": [
+    {
+      "state": "passed",
+      "method": "illava",
+      "dtype": "float16",
+      "units": 12,
+      "crc_export_eos_and_dense_identity": true,
+      "scope": "bounded three-request regression, no full-split claim"
+    },
+    {
+      "state": "passed",
+      "method": "illava",
+      "dtype": "float32",
+      "units": 12,
+      "crc_export_eos_and_dense_identity": true,
+      "scope": "bounded three-request regression, no full-split claim"
+    }
+  ],
+  "complete_generations": 24,
+  "matches_previously_validated_author_binding": true,
+  "eager_qk32_retained": true,
+  "smol_production_unchanged": true,
+  "fa2_interface": {
+    "state": "passed",
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "version": "2.7.3",
+    "cells": [
+      {
+        "segments": 1,
+        "state": "passed",
+        "fa2_return_shapes": [
+          [
+            16,
+            4,
+            8
+          ],
+          [
+            4,
+            16
+          ],
+          [
+            0
+          ]
+        ],
+        "author_uses": "tuple[1], stock FA2 softmax_lse",
+        "retained_per_image": 12
+      },
+      {
+        "segments": 5,
+        "state": "passed",
+        "fa2_return_shapes": [
+          [
+            80,
+            4,
+            8
+          ],
+          [
+            4,
+            80
+          ],
+          [
+            0
+          ]
+        ],
+        "author_uses": "tuple[1], stock FA2 softmax_lse",
+        "retained_per_image": 12
+      }
+    ]
+  },
+  "fa2_full_method_release": "pending cross-review and implementation of remaining paths",
+  "formal_launch": false
+}

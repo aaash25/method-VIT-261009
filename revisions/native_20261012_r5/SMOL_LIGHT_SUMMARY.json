@@ -1,0 +1,8 @@
+{
+  "state": "passed",
+  "component_cells": 20,
+  "skipped": 0,
+  "expected_dtype_failures": 2,
+  "rounding_observed": true,
+  "production_changed": false
+}

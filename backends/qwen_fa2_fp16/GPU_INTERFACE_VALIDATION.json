@@ -1,0 +1,47 @@
+{
+  "state": "passed",
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "version": "2.7.3",
+  "cells": [
+    {
+      "segments": 1,
+      "state": "passed",
+      "fa2_return_shapes": [
+        [
+          16,
+          4,
+          8
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          0
+        ]
+      ],
+      "author_uses": "tuple[1], stock FA2 softmax_lse",
+      "retained_per_image": 12
+    },
+    {
+      "segments": 5,
+      "state": "passed",
+      "fa2_return_shapes": [
+        [
+          80,
+          4,
+          8
+        ],
+        [
+          4,
+          80
+        ],
+        [
+          0
+        ]
+      ],
+      "author_uses": "tuple[1], stock FA2 softmax_lse",
+      "retained_per_image": 12
+    }
+  ]
+}

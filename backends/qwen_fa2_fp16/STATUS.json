@@ -1,0 +1,44 @@
+{
+  "backend": "flash_attention_2",
+  "precision": "float16",
+  "state": "pre_review_only",
+  "formal_run_allowed": false,
+  "full_dataset_run_started": false,
+  "cross_review": "pending user model switch",
+  "methods": [
+    {
+      "method": "ipcv",
+      "state": "native FA2 prepared; historical whole-runner pass"
+    },
+    {
+      "method": "illava",
+      "state": "pinned native FA2 component pass; whole-runner pending"
+    },
+    {
+      "method": "pitome",
+      "state": "FA2 loader and whole-runner pending"
+    },
+    {
+      "method": "dtome",
+      "state": "proportional attention FA2 equivalence pending"
+    }
+  ],
+  "datasets": [
+    "HRBench4K",
+    "POPE",
+    "MMVP",
+    "RealWorldQA",
+    "MMStar",
+    "MMMU_val",
+    "ScienceQA_image_test",
+    "MMBench_EN_dev_v1",
+    "TextVQA_val",
+    "OCRBench",
+    "MME",
+    "ChartQA",
+    "CVBench2D",
+    "CVBench3D",
+    "AI2D"
+  ],
+  "image_validation": "skipped by user request"
+}
