@@ -1,0 +1,18 @@
+{
+  "state": "built",
+  "base": "r5",
+  "release": "r6",
+  "changed": [
+    "smol/BUNDLE_SHA256.json",
+    "smol/smol_merge_ports.py"
+  ],
+  "added": [
+    "smol/test_half_rounding.py"
+  ],
+  "runtime_change": "Smol iLLaVA pooled.half().to(x.dtype)",
+  "other_models_unchanged": true,
+  "qwen_qk32_preserved": true,
+  "red_failed_for_missing_rounding": true,
+  "green_passed": true,
+  "formal_run": false
+}

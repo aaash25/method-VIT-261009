@@ -1,0 +1,38 @@
+{
+  "state": "passed",
+  "release": "r6",
+  "cpu_tests": "38 passed in 28.80s",
+  "cuda_rounding_cells": 4,
+  "skipped": 0,
+  "full_generations": 28,
+  "results": [
+    {
+      "dtype": "float16",
+      "units": 14,
+      "state": "passed",
+      "peak_allocated_bytes": 19654529536,
+      "gpu": "Tesla V100-SXM2-32GB",
+      "natural_eos": true,
+      "journal_export": true,
+      "dense_disabled_restored": true,
+      "simultaneous_timing": true
+    },
+    {
+      "dtype": "float32",
+      "units": 14,
+      "state": "passed",
+      "peak_allocated_bytes": 25966512640,
+      "gpu": "Tesla V100-SXM2-32GB",
+      "natural_eos": true,
+      "journal_export": true,
+      "dense_disabled_restored": true,
+      "simultaneous_timing": true
+    }
+  ],
+  "archive_sha256": "d011e598c269ad55d34ae0f373f412f4390e22c68f0ef30b7880e018fe76b2dd",
+  "source_sha256": "1987df9504872aac75d49c3a1265e608efe8560eaaf440c04241a10999d692a6",
+  "scope": "one original five-image MMMU question; all four methods and disabled/restored Dense, two precisions; no full split or speedup claim",
+  "image_validation": "skipped by user request",
+  "formal_run": false,
+  "adaptation": ".half().to(x.dtype) retains FP16 rounding before dtype-compatible scatter"
+}

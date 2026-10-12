@@ -1,0 +1,17 @@
+{
+  "audit_smol_pipeline.py": "c019a73311d03915ef087790c9974d1341e7d9c7a3df11e71ded3a7958cd9c45",
+  "dtome_legacy_bridge.py": "b1d489667ecfd79e1b08534f7b511e186f72f9f03c08acdfba85db192eaf7d91",
+  "evaluate_key_cleanup.py": "015e099483ff80eb3ccddce3212a6a5c358652bbaca56e2f1b7b2fc135e71217",
+  "launch_smol_pipeline.py": "07502fadf2638c53f8fd752c2266bf3a884acb4928fd41716be31aa65d67d299",
+  "request_meter.py": "4391c78c12376af599bd05521d499310e82ec7d9f949d50c5ce8c89be9add914",
+  "SMOL_CONFIGS.json": "24fb3677a2ca3cd1786b5625e274f05ad9bc5f9c52e47a92ad90d273c475fecf",
+  "smol_eager_memory.py": "61c3c92de6b9126f924dd616a495312aa3d8094cc5b63aef1bccb1c8dc9ec496",
+  "smol_merge_ports.py": "94a840db5a4d940d7344994c493cb24d72a8ed43d634e59628025033e0107d7e",
+  "smol_pipeline.py": "df2bc87d206e837cb257707df0646e25e27e5a93c5eb3f15c9c65e72cb7df21b",
+  "test_native_scatter.py": "3f5b6e243afbce05262b8a76975a3c4b6e3d5e6ee7d1ade7b65213d2433f647c",
+  "test_paper_adaptation.py": "1d306ba6959a4c65f9d04f038d70857be4f44989918304d929ea9f3507e377d3",
+  "test_request_meter.py": "584ac930468bf9899e7f85ffb8351320034f86570afcaab3d43e94ff13bda733",
+  "test_smol_eager_memory.py": "8563b6bbd6e0686a95f4d421e62151791cde83a2dd468c31952f3c774bddaaf3",
+  "USER_SCOPE.json": "8a34165d1df633a7a155dde72da8e361e7e7e49bbc29739777243a7f03477a08",
+  "test_half_rounding.py": "a25195ae7655505f167751c5b4bdcfe6d1f0eebcaacc6f6d33dc8aa99c71f2bf"
+}
