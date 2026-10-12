@@ -1,0 +1,7 @@
+{
+  "prior_release": "ov_native_fp16_r2",
+  "failure": "ModuleNotFoundError: dual_timing before model load",
+  "change": "include unchanged helper from already audited FP32 reporting release",
+  "helper_sha256": "7e919bb95ab740e6d0717b6ef46b56d611d07af590159a9cd6758b848500e7b5",
+  "method_and_precision_changes": false
+}

@@ -1,0 +1,27 @@
+{
+  "status": "local revision; not delivered",
+  "release": "native_release_20261012_r4",
+  "derived_from": "native_release_20261012_r3",
+  "base_bundles": {
+    "qwen_ports": "qwen_dtome_batch_r1",
+    "qwen_native": "qwen_native_matrix_r2",
+    "smol": "smol_multiimage_r1",
+    "llava": "llava_matrix_r1",
+    "ov16": "ov_native_fp16_r6",
+    "ov32": "ov_matrix_r1"
+  },
+  "gpu_passed": false,
+  "published": false,
+  "gpu_status": "pending exact-release GPU smoke of r4; r3 GPU evidence does not cover r4 source",
+  "local_checks": "pending re-run after r4 freeze",
+  "qk32": "retained in source",
+  "open_decisions": [],
+  "r3_history": {
+    "release": "native_release_20261012_r3",
+    "confirmed": "26 jobs / 316 complete generations passed; server and local independent audits passed",
+    "known_regression": "r1 FP16 merge accumulation overflow, restored in r3",
+    "github_commit": "4d3e8e27f128c43ac0fab313e12627d10cde1619",
+    "applies_to_r4": false
+  },
+  "github": "local staging only; no publish until validation"
+}

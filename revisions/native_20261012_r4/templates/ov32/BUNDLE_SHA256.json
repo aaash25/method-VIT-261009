@@ -1,0 +1,16 @@
+{
+  "author_dtome_bridge.py": "6a408fc329e90c47d42cf45b8e04e99fcbd598582bd7cf1b43eb14b4c381356d",
+  "author_visual_source.py": "320d6bc3684fd5228dc73785ae17caeb66098ba7cc3f6bfa34d04a8582acad45",
+  "diagnostic_guard.py": "2d6253e909102a579d54361145b54d0b2d5fa20aec5b2ba9cfcc6d8962ac6391",
+  "frozen_author_source/dymu_onevision_siglip.py": "5ece13ab81bcd864c3ace1ca00de3f89c3275ca0f14ad8f1a244ecfc62b431db",
+  "frozen_author_source/dymu_tome.py": "152ce6283068af07bb0d4744bd5fb5bc22934a15bb31adf0ba0772d2f62f3d5f",
+  "frozen_author_source/illava_siglip_encoder.py": "9fd2fa981b0d898f982b59e188be94106de69ecfce9ffe7c81f0413c39a6a04b",
+  "frozen_author_source/ipcv_qwen2vl.py": "4f35ad8f8f5046cae02ceebb5afc54524578f32833fc8bc40d116d0101e03594",
+  "launch.py": "527829b0e132fa9ed25af70909fed8526556ee17b864c5b974e38db31dac4039",
+  "onevision_ports.py": "facc2326ced461944db7f3ceb51c2b04dc4b9c928ff42ccaabc3a33e3838b882",
+  "request_meter.py": "ee1aa4d7ac23c339967b037f5d7e8fc2946b15813376188bad9ef19dc8f13f64",
+  "smol_merge_ports.py": "9acebb56522a9ffcdebc032c35d32ab2eb5cb595f73b2ed7137b94be018dbf09",
+  "test_deferred_native.py": "e22465cd6b8805fa2b6e532514671c1972895ca55fed3085da89b47cdb457ec4",
+  "test_request_meter.py": "584ac930468bf9899e7f85ffb8351320034f86570afcaab3d43e94ff13bda733",
+  "worker.py": "9b0aeebac23689b8248a3e4fbced031ac89963d983a9bcacef2e5c4fd55cb3e4"
+}

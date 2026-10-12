@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-11",
+  "rule": "Official question retains all native images/crops; every question independently recomputes ViT.",
+  "request": "MMMU_val 3414",
+  "original_images": 5,
+  "dtypes": [
+    "float16",
+    "float32"
+  ],
+  "purpose": "bounded exact runner multi-image smoke, not a new threshold search or formal full split",
+  "image_validation": "skipped by user request"
+}
