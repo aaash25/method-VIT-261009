@@ -1,0 +1,12 @@
+{
+  "members": {
+    "candidate_quality.py": "d7e194d6116c187550e6c45acf3677f40f03f546302addbd19a1b723e6d80399",
+    "diagnostic_guard.py": "2d6253e909102a579d54361145b54d0b2d5fa20aec5b2ba9cfcc6d8962ac6391",
+    "guarded_entry.py": "bee7c86aa7b37b6438c4182281bc7fe7cddee4b797563323ad6e5661a00e1c30",
+    "replay.py": "0572695bcef2fe2fe0b6fc650807bb8b06f9c6157d4c914f9d17c2eaaadc233a",
+    "run_smoke.py": "1dc14901b0e434e5b7acd26739d5da690f6b3c139dfe262cfb6d441e9ecbb8f7",
+    "test_selection.py": "23fac78bdd24a3e1b4ad1ac3aaf4a6cc5947d1df3ccf1714137a5c52befcab73"
+  },
+  "reviewed_base_helper_sha256": "7e919bb95ab740e6d0717b6ef46b56d611d07af590159a9cd6758b848500e7b5",
+  "scope": "new diagnostic export repair entry; no automatic formal launch"
+}

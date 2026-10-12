@@ -1,0 +1,13 @@
+{
+  "schema": "supervisor_package_v1",
+  "members": {
+    "cpu_epoch_writer.py": "efcab9d45ecf01e8b13f8eedecc1e2993ab196ef44668932bae3d9f32b73a332",
+    "cpu_phase_worker.py": "587eee4258e8e0df8dbc11e6e52de7b820d19d373bf74774678245818a3ff138",
+    "epoch_archive.py": "49be74a02beb7758dfd2a92eca4b2bd6e68dc8268e29fe79569d2df7ddc868f3",
+    "launch.sh": "86e925abdd424b2318aea812914a6aa8d74b596c0b862afbb00c550d0588de82",
+    "REAL_CONTRACT_TEMPLATE.json": "d05de27b271f1e054e18693b1df1fbb1bd74da7a05beefc45e506d1931af6c9d",
+    "supervisor.py": "c8f9e693637b816e58330b33a2c88a9df7a46a52f1b2b44220fb1ba9aabcf47a",
+    "test_outer_budget.py": "434392580eaacc14be827530f30d9cdf221fc2a4787b097d7aa9edf93280dab2",
+    "test_supervisor.py": "f93c980ad37da67b6be21834e1c2c40f93dde98c585ccaa988b10790fa51f64d"
+  }
+}

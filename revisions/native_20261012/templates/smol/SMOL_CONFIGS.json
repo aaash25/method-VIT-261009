@@ -1,0 +1,23 @@
+{
+  "dtome": {
+    "checkpoint": "dtome_324out"
+  },
+  "pitome": {
+    "ratio": 0.95
+  },
+  "illava_vit": {
+    "removed_per_layer": 136,
+    "zero_based_layers": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "ipcv": {
+    "zero_based_prune_layer": 3,
+    "keep_ratio": 0.15,
+    "as_layers": 7,
+    "top_k": 10
+  }
+}

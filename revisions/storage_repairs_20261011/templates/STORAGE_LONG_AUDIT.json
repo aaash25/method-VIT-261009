@@ -1,0 +1,17 @@
+{
+  "state": "passed",
+  "stage": "long",
+  "counts": [
+    324,
+    656
+  ],
+  "source_identity": true,
+  "actual_exit": true,
+  "all_full_eos": true,
+  "all_crc": true,
+  "immutable_chain_and_snapshot_hashes": true,
+  "prior_records_byte_exact": true,
+  "historical_429_boundary_crossed": true,
+  "evidence_sha256": "3a718f94aa7785f1759c71067280f84c26ddd8869f84334ae911da4bf513d7f2",
+  "elapsed": 7214.552539074037
+}

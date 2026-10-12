@@ -1,0 +1,2 @@
+# Hash-pinned source templates must retain their tested line endings.
+revisions/**/templates/** -text

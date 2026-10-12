@@ -1,0 +1,262 @@
+[
+  {
+    "id": "qwen_float16_pitome",
+    "model": "qwen",
+    "dtype": "float16",
+    "method": "pitome",
+    "bundle": "qwen_ports",
+    "ordinal": 0,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "qwen_float16_dtome",
+    "model": "qwen",
+    "dtype": "float16",
+    "method": "dtome",
+    "bundle": "qwen_ports",
+    "ordinal": 1,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "qwen_float16_illava",
+    "model": "qwen",
+    "dtype": "float16",
+    "method": "illava",
+    "bundle": "qwen_native",
+    "ordinal": 2,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "qwen_float16_ipcv",
+    "model": "qwen",
+    "dtype": "float16",
+    "method": "ipcv",
+    "bundle": "qwen_native",
+    "ordinal": 3,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "qwen_float32_pitome",
+    "model": "qwen",
+    "dtype": "float32",
+    "method": "pitome",
+    "bundle": "qwen_ports",
+    "ordinal": 4,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "qwen_float32_dtome",
+    "model": "qwen",
+    "dtype": "float32",
+    "method": "dtome",
+    "bundle": "qwen_ports",
+    "ordinal": 5,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "qwen_float32_illava",
+    "model": "qwen",
+    "dtype": "float32",
+    "method": "illava",
+    "bundle": "qwen_native",
+    "ordinal": 6,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "qwen_float32_ipcv",
+    "model": "qwen",
+    "dtype": "float32",
+    "method": "ipcv",
+    "bundle": "qwen_native",
+    "ordinal": 7,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "smol_float16_all",
+    "model": "smol",
+    "dtype": "float16",
+    "method": "all",
+    "bundle": "smol",
+    "ordinal": 8,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "smol_float32_all",
+    "model": "smol",
+    "dtype": "float32",
+    "method": "all",
+    "bundle": "smol",
+    "ordinal": 9,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "llava_float16_pitome",
+    "model": "llava",
+    "dtype": "float16",
+    "method": "pitome",
+    "bundle": "llava",
+    "ordinal": 10,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "llava_float16_dtome",
+    "model": "llava",
+    "dtype": "float16",
+    "method": "dtome",
+    "bundle": "llava",
+    "ordinal": 11,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "llava_float16_illava",
+    "model": "llava",
+    "dtype": "float16",
+    "method": "illava",
+    "bundle": "llava",
+    "ordinal": 12,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "llava_float16_ipcv",
+    "model": "llava",
+    "dtype": "float16",
+    "method": "ipcv",
+    "bundle": "llava",
+    "ordinal": 13,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "llava_float32_pitome",
+    "model": "llava",
+    "dtype": "float32",
+    "method": "pitome",
+    "bundle": "llava",
+    "ordinal": 14,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "llava_float32_dtome",
+    "model": "llava",
+    "dtype": "float32",
+    "method": "dtome",
+    "bundle": "llava",
+    "ordinal": 15,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "llava_float32_illava",
+    "model": "llava",
+    "dtype": "float32",
+    "method": "illava",
+    "bundle": "llava",
+    "ordinal": 16,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "llava_float32_ipcv",
+    "model": "llava",
+    "dtype": "float32",
+    "method": "ipcv",
+    "bundle": "llava",
+    "ordinal": 17,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "onevision_float16_pitome",
+    "model": "onevision",
+    "dtype": "float16",
+    "method": "pitome",
+    "bundle": "ov16",
+    "ordinal": 18,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "onevision_float16_dtome",
+    "model": "onevision",
+    "dtype": "float16",
+    "method": "dtome",
+    "bundle": "ov16",
+    "ordinal": 19,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "onevision_float16_illava",
+    "model": "onevision",
+    "dtype": "float16",
+    "method": "illava",
+    "bundle": "ov16",
+    "ordinal": 20,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "onevision_float16_ipcv",
+    "model": "onevision",
+    "dtype": "float16",
+    "method": "ipcv",
+    "bundle": "ov16",
+    "ordinal": 21,
+    "worker": 0,
+    "weight": 1
+  },
+  {
+    "id": "onevision_float32_pitome",
+    "model": "onevision",
+    "dtype": "float32",
+    "method": "pitome",
+    "bundle": "ov32",
+    "ordinal": 22,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "onevision_float32_dtome",
+    "model": "onevision",
+    "dtype": "float32",
+    "method": "dtome",
+    "bundle": "ov32",
+    "ordinal": 23,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "onevision_float32_illava",
+    "model": "onevision",
+    "dtype": "float32",
+    "method": "illava",
+    "bundle": "ov32",
+    "ordinal": 24,
+    "worker": 0,
+    "weight": 2
+  },
+  {
+    "id": "onevision_float32_ipcv",
+    "model": "onevision",
+    "dtype": "float32",
+    "method": "ipcv",
+    "bundle": "ov32",
+    "ordinal": 25,
+    "worker": 0,
+    "weight": 2
+  }
+]

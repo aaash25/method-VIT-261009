@@ -1,49 +1,35 @@
 # VLM 视觉编码器方法迁移
 
-本仓库维护四个VLM模型、四种方法的迁移说明、源码快照与独立核对。目前已有16个模型×方法说明目录，以及包含33个Python文件的公开源码快照，涵盖完整项目文件、明确标记的节点选集和上游参考副本。
+当前修订为 **2026-10-12 原生方法修复版**。优先使用作者对应模型实现，去除额外稳定排序、强制确定性归约及计时路径中的诊断开销；保留并说明必要的接口、FP16/FP32 和显存适配。
 
-**当前不是16组完整可运行的发行包，也不是16组已通过复现验收的声明。** 不同组合公开到实现、选集或调用接口的不同层级；每个目录单独注明。iLLaVA作者算法尚未随公开包收入。
+服务器已完成四个模型、四种方法、两种精度的有界回归：**26 个任务、316 次完整自然结束生成通过**。这支持当前迁移和已知问题的回归验收，不代表全量数据集准确率或任何输入都不会报错。
 
-## 从这里开始
+## 当前入口
 
-- [源码快照说明](SOURCE_CANDIDATE_README.md)：本批实际内容、保留身份和公开范围
-- [完整项目文件快照](migration_sources/current_archive/) · [节点选集](migration_sources/extracted_components/) · [解码作者参考](migration_sources/decoded_author_payloads/) · [上游参考副本](migration_sources/upstream_references/)
-- [运行限制与缺失依赖](sources/MIGRATION_RUNTIME_LIMITS.md)：先读阻断，再考虑后续封装
-- [模型×方法索引](sources/MODEL_METHOD_INDEX.json) · [逐文件取舍与来源](sources/FILE_DISPOSITIONS.json)
-- [组件许可与版权](third_party/COMPONENT_NOTICES.md) · [HF/InternVL补充出处](sources/ADDITIONAL_COMPONENT_NOTICE_PROVENANCE.json)
+- [修订说明与统一运行入口](revisions/native_20261012/README.md)
+- [16 个模型×方法的来源、适配和边界](revisions/native_20261012/METHOD_FIDELITY.md)
+- [完整验收记录与逐请求双计时](revisions/native_20261012/VALIDATION_20261012.json)
+- [公开模板与已测试代码的对应清单](revisions/native_20261012/FILE_MAP.json)
+- [写入、导出与两小时恢复验证的历史修复](revisions/storage_repairs_20261011/README.md)
 
-## 模型与方法入口
+统一入口为恢复后的 `run.py`。服务器完整私有包已部署；公开仓库是包含 95 个模板文件的增量包，6 个含 iLLaVA 算法的文件继续使用固定哈希的本地依赖。仍需既有离线模型、数据集和冻结环境，不能直接把公开模板作为独立模型发行包运行。
 
-| 模型 | iLLaVA | PiToMe | DToMe/DyMU | IPCV |
-|---|---|---|---|---|
-| Qwen2-VL-2B | [说明与调用入口](models/qwen2-vl-2b/illava/README.md) | [说明与源码](models/qwen2-vl-2b/pitome/README.md) | [说明与源码](models/qwen2-vl-2b/dymu/README.md) | [说明与接口](models/qwen2-vl-2b/ipcv/README.md) |
-| SmolVLM2-2.2B | [说明与调用入口](models/smolvlm2-2.2b/illava/README.md) | [说明与选集](models/smolvlm2-2.2b/pitome/README.md) | [说明与源码](models/smolvlm2-2.2b/dymu/README.md) | [说明与源码](models/smolvlm2-2.2b/ipcv/README.md) |
-| LLaVA-1.5-7B | [说明与调用入口](models/llava15-7b/illava/README.md) | [说明与源码](models/llava15-7b/pitome/README.md) | [说明与接口](models/llava15-7b/dymu/README.md) | [说明与接口](models/llava15-7b/ipcv/README.md) |
-| LLaVA-OneVision-7B | [说明与加载入口](models/llava-onevision-7b/illava/README.md) | [说明与源码](models/llava-onevision-7b/pitome/README.md) | [说明与加载入口](models/llava-onevision-7b/dymu/README.md) | [说明与接口](models/llava-onevision-7b/ipcv/README.md) |
+Qwen FP16 文本 QK32 一直保留。此次误删的是另一处合并中间累加保护，现已恢复为 FP32 累加，并通过真实失败题回归。压缩输出遵循作者方法，不以复刻旧迁移的逐元素结果为目标。
 
-实际checkpoint ID、revision、dtype与后端以对应冻结版本为准，不能只凭模型简称混用。研究范围是视觉编码器分支，不把LLM token减少带来的收益算作ViT加速比。
+每题使用自己的全部原图，顺序 batch size 1，不跨题复用 ViT。纯 ViT 与端到端计时来自同一次完整生成；图片附加验证按用户要求跳过。显存适配与写入修复均保留证据，但应用侧验证不等于确认共享存储历史 ENOSPC 的基础设施根因。
 
-## 运行与验收边界
+## 历史版本
 
-- Qwen原适配顶层仍导入选集中省略的FiCoCo函数，单选PiToMe/DToMe也存在导入阻断。
-- Smol选集仍保留指向省略iLLaVA函数的分支；OneVision和LLaVA还缺若干冻结桥接、资源与环境文件。
-- 全文/逐节点AST一致支持清理或保留节点未改，不证明选集具有原模块全部功能。不要把选集hash替换进旧冻结合同以绕过缺口。
-- Qwen Dense原严格门为failed_preserved，比较完整生成token序列；残余差异根因未定。它不因代码公开或静态核对而改为通过。
-- Qwen DToMe固定标量阈值变体、Smol DToMe dispatch/none-pass差异，以及其它迁移边界均在各组合说明中保留。
+本次新增修订目录并创建后继提交，未改写旧提交。下列目录和报告保留 2026-10-09 当时的状态，其未通过标记不能当作当前修订结论，当前通过记录也不追溯覆盖旧失败。
 
-质量与计时分别绑定各自配置、源码和执行来源；后续封装或修复不得追溯改写旧结果身份。main表示开发状态，不自动表示已验证版本；当前未发布全组合验收通过的release。
+- [2026-10-09 固定提交](https://github.com/aaash25/method-VIT-261009/tree/2284df03820d4b88914d446b3e31955641de929c)
+- [旧源码快照说明](SOURCE_CANDIDATE_README.md) · [旧模型方法索引](sources/MODEL_METHOD_INDEX.json)
+- [旧完整项目快照](migration_sources/current_archive/) · [旧节点选集](migration_sources/extracted_components/)
+- [旧运行限制](sources/MIGRATION_RUNTIME_LIMITS.md) · [旧公开清单](sources/PUBLIC_REPOSITORY_MANIFEST_20261009_r3.json)
 
-## 许可与公开范围
+## 许可与文件身份
 
-许可按文件及来源组件保留：PiToMe的CC BY-NC 4.0非商业条件、DyMU MIT、IPCV/HF/LLaVA相关Apache-2.0、InternVL底层MIT分别处理，不为全仓统一重新授权。iLLaVA方法根许可未明确，其作者实现未收录；公开加载器和调用配置不替代授权。
+许可按组件继承：[组件许可与版权](third_party/COMPONENT_NOTICES.md)。PiToMe CC BY-NC 4.0、DyMU MIT、IPCV/HF/LLaVA Apache-2.0、InternVL 底层 MIT；不为全仓统一重新授权。iLLaVA 作者完整算法沿用已有本地依赖边界。
 
-模型权重、数据集实体、真实基准题干、私人会话、凭据、个人机器路径和未筛选原始日志不进入仓库。通用对话模板仍按源码保留。
-
-## 文件身份与历史清单
-
-- [当前统一公开清单](sources/PUBLIC_REPOSITORY_MANIFEST_20261009_r3.json)：覆盖本次导航更新后的全部文件，清单自身除外
-- [源码快照静态复核](sources/SOURCE_REVIEW_VERIFICATION_20261009_r2.json)：记录源码身份和检查范围，不是运行验收
-- 根MANIFEST.json保留为[首批29文件的历史清单](https://github.com/aaash25/-/blob/ed7b06b65c5e563106671e76fe37ce4e0f2cac78/MANIFEST.json)
-- r2统一清单保留为[第二批公开后的历史快照](https://github.com/aaash25/-/blob/e417f21c1dde59bd6962a07cacbe628adf761332/sources/PUBLIC_REPOSITORY_MANIFEST_20261009_r2.json)
-
-历史清单的hash对应链接中的固定commit，不要求它们匹配随后更新的文档。最新清单记录历史清单文件本身，历史清单不反向引用最新清单，避免相互哈希循环。
+模型权重、数据集实体、真实题干、私人路径、凭据和未筛选原始日志不进入公开仓库。
+[当前公开文件清单](sources/PUBLIC_REPOSITORY_MANIFEST_20261012.json) 对应本次 Git 文件内容，排除清单自身；旧清单保持其历史身份。

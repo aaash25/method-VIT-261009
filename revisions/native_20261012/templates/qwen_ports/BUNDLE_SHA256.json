@@ -1,0 +1,18 @@
+{
+  "ADAPTATIONS.md": "641ffc23f79fc5069a259129b8e85bee5cbc0a7eb2a9f68c856a48dc78954e27",
+  "audit.py": "e934f842a0439e59a9e316cb8e0d43cd01fa39500165c3035860813e757299e0",
+  "author_visual_source.py": "b89b5a038671370fdf3695a029ecdbf6574ad5225fe27c9f917b72536779ec53",
+  "diagnostic_guard.py": "2d6253e909102a579d54361145b54d0b2d5fa20aec5b2ba9cfcc6d8962ac6391",
+  "dtome_batch.py": "14135bf8ff3b6cb9b68b0efab798c0b71970ca70d62b594293839b899d7a2bf0",
+  "frozen_author_source/dymu_onevision_siglip.py": "5ece13ab81bcd864c3ace1ca00de3f89c3275ca0f14ad8f1a244ecfc62b431db",
+  "frozen_author_source/dymu_tome.py": "152ce6283068af07bb0d4744bd5fb5bc22934a15bb31adf0ba0772d2f62f3d5f",
+  "launch.py": "74109695f38ddbf3a0f5382eea1bad158ba6a6fbb18806add05e89f52d216ac9",
+  "peer_port_core.py": "be53fffc081b48316661683be630443f3378f5ffb9ea2782ec434aa22df581bb",
+  "qwen_peer_ports.py": "08d7ae14745ba8e93776fb485d9cab470757750c31e8d003e869e10bbbb3084e",
+  "qwen_pipeline.py": "489df0bda650d83c2a233e9da7574d3d92fa5188f9129bf77f961fd924aa7b09",
+  "request_meter.py": "ee1aa4d7ac23c339967b037f5d7e8fc2946b15813376188bad9ef19dc8f13f64",
+  "test_dtome_batch.py": "b55a05a7043c4ad3a8064b8721b49a5c935ead76afe71680273e8b061d4754ab",
+  "test_native_accumulation.py": "aade5c207d0de298ee678ab07efe69b378a9bdd2485d6b9e677dd23156eb3e86",
+  "test_qwen_batch_integration.py": "b6cf18b4912a2197cdae60d72efc51ac53c2c030d23624b90c65c971eb38dd08",
+  "test_request_meter.py": "8f3a25d26ea7a454b4c04020dc277e5a7e12f6e140d9c6dc39f4d397e9f2f088"
+}
