@@ -1,0 +1,462 @@
+{
+  "version": "eager-final-20261013",
+  "status": "FINAL",
+  "accepted": 32,
+  "total": 32,
+  "scope": "eager migration code acceptance",
+  "composite_gpu_executed": false,
+  "acceptance_basis": "inherited component acceptances",
+  "source_manifest": "RELEASE_SHA256.json",
+  "source_manifest_sha256": "35fbf088f3111f7f0fd7e87d0f18e1a0cff12b34f24cd3083679f2f69f4474e1",
+  "validation": "FINAL_ACCEPTANCE_20261013.json",
+  "combinations": [
+    {
+      "model": "Qwen2-VL-2B",
+      "method": "PiToMe",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "qwen_ports",
+      "bundle_sha256": "147a597b0b7ddca0df83264fd6e4ff2b7dc1e0de443c3705f1e83d4855ea7559",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "Qwen2-VL-2B",
+      "method": "PiToMe",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "qwen_ports",
+      "bundle_sha256": "147a597b0b7ddca0df83264fd6e4ff2b7dc1e0de443c3705f1e83d4855ea7559",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "Qwen2-VL-2B",
+      "method": "DToMe",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "qwen_ports",
+      "bundle_sha256": "147a597b0b7ddca0df83264fd6e4ff2b7dc1e0de443c3705f1e83d4855ea7559",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "Qwen2-VL-2B",
+      "method": "DToMe",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "qwen_ports",
+      "bundle_sha256": "147a597b0b7ddca0df83264fd6e4ff2b7dc1e0de443c3705f1e83d4855ea7559",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "Qwen2-VL-2B",
+      "method": "iLLaVA",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "qwen_native",
+      "bundle_sha256": "299346ac25214e99856d3b4842c6a8cc961e553efe62b667d0baa98b2d85c734",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "qwen_illava_r5"
+      ]
+    },
+    {
+      "model": "Qwen2-VL-2B",
+      "method": "iLLaVA",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "qwen_native",
+      "bundle_sha256": "299346ac25214e99856d3b4842c6a8cc961e553efe62b667d0baa98b2d85c734",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "qwen_illava_r5"
+      ]
+    },
+    {
+      "model": "Qwen2-VL-2B",
+      "method": "IPCV",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "qwen_native",
+      "bundle_sha256": "299346ac25214e99856d3b4842c6a8cc961e553efe62b667d0baa98b2d85c734",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "Qwen2-VL-2B",
+      "method": "IPCV",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "qwen_native",
+      "bundle_sha256": "299346ac25214e99856d3b4842c6a8cc961e553efe62b667d0baa98b2d85c734",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "SmolVLM2-2.2B",
+      "method": "PiToMe",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "smol",
+      "bundle_sha256": "e2a76545cfc09162e57342a9d25076d65d32a74530a91bd90fd16eefe73eab6f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "smol_half_r6"
+      ]
+    },
+    {
+      "model": "SmolVLM2-2.2B",
+      "method": "PiToMe",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "smol",
+      "bundle_sha256": "e2a76545cfc09162e57342a9d25076d65d32a74530a91bd90fd16eefe73eab6f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "smol_half_r6"
+      ]
+    },
+    {
+      "model": "SmolVLM2-2.2B",
+      "method": "DToMe",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "smol",
+      "bundle_sha256": "e2a76545cfc09162e57342a9d25076d65d32a74530a91bd90fd16eefe73eab6f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "smol_half_r6"
+      ]
+    },
+    {
+      "model": "SmolVLM2-2.2B",
+      "method": "DToMe",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "smol",
+      "bundle_sha256": "e2a76545cfc09162e57342a9d25076d65d32a74530a91bd90fd16eefe73eab6f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "smol_half_r6"
+      ]
+    },
+    {
+      "model": "SmolVLM2-2.2B",
+      "method": "iLLaVA",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "smol",
+      "bundle_sha256": "e2a76545cfc09162e57342a9d25076d65d32a74530a91bd90fd16eefe73eab6f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "smol_half_r6"
+      ]
+    },
+    {
+      "model": "SmolVLM2-2.2B",
+      "method": "iLLaVA",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "smol",
+      "bundle_sha256": "e2a76545cfc09162e57342a9d25076d65d32a74530a91bd90fd16eefe73eab6f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "smol_half_r6"
+      ]
+    },
+    {
+      "model": "SmolVLM2-2.2B",
+      "method": "IPCV",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "smol",
+      "bundle_sha256": "e2a76545cfc09162e57342a9d25076d65d32a74530a91bd90fd16eefe73eab6f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "smol_half_r6"
+      ]
+    },
+    {
+      "model": "SmolVLM2-2.2B",
+      "method": "IPCV",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "smol",
+      "bundle_sha256": "e2a76545cfc09162e57342a9d25076d65d32a74530a91bd90fd16eefe73eab6f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "smol_half_r6"
+      ]
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "PiToMe",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "llava",
+      "bundle_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "PiToMe",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "llava",
+      "bundle_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "DToMe",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "llava",
+      "bundle_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "llava_dtome_clone"
+      ]
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "DToMe",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "llava",
+      "bundle_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "llava_dtome_clone"
+      ]
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "iLLaVA",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "llava",
+      "bundle_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "iLLaVA",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "llava",
+      "bundle_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "IPCV",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "llava",
+      "bundle_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "IPCV",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "llava",
+      "bundle_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-OneVision-7B",
+      "method": "PiToMe",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "ov16",
+      "bundle_sha256": "0bb01413f0133b9bc3b138ee82f74db86c75e6ad446ed6fc307ee3872953cfe9",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-OneVision-7B",
+      "method": "PiToMe",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "ov32",
+      "bundle_sha256": "47803aa7996b139d9fa7b44b75fc0d45c12f7ff22a41f111d33acf7f9fe39d38",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-OneVision-7B",
+      "method": "DToMe",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "ov16",
+      "bundle_sha256": "0bb01413f0133b9bc3b138ee82f74db86c75e6ad446ed6fc307ee3872953cfe9",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-OneVision-7B",
+      "method": "DToMe",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "ov32",
+      "bundle_sha256": "47803aa7996b139d9fa7b44b75fc0d45c12f7ff22a41f111d33acf7f9fe39d38",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-OneVision-7B",
+      "method": "iLLaVA",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "ov16",
+      "bundle_sha256": "0bb01413f0133b9bc3b138ee82f74db86c75e6ad446ed6fc307ee3872953cfe9",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-OneVision-7B",
+      "method": "iLLaVA",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "ov32",
+      "bundle_sha256": "47803aa7996b139d9fa7b44b75fc0d45c12f7ff22a41f111d33acf7f9fe39d38",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-OneVision-7B",
+      "method": "IPCV",
+      "dtype": "float16",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "ov16",
+      "bundle_sha256": "0bb01413f0133b9bc3b138ee82f74db86c75e6ad446ed6fc307ee3872953cfe9",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    },
+    {
+      "model": "LLaVA-OneVision-7B",
+      "method": "IPCV",
+      "dtype": "float32",
+      "backend": "eager",
+      "code_status": "FINAL",
+      "acceptance": "closed",
+      "bundle": "ov32",
+      "bundle_sha256": "47803aa7996b139d9fa7b44b75fc0d45c12f7ff22a41f111d33acf7f9fe39d38",
+      "file_map": "FILE_MAP.json",
+      "component_acceptance": [
+        "r4_base"
+      ]
+    }
+  ]
+}

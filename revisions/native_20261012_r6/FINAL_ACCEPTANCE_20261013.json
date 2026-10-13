@@ -1,0 +1,97 @@
+{
+  "state": "accepted",
+  "status": "FINAL",
+  "date": "2026-10-13",
+  "backend_scope": "eager migration code",
+  "accepted_combinations": 32,
+  "acceptance_basis": "继承各组件已通过验收；本次只整理发布与核验重建字节",
+  "composite_gpu_executed": false,
+  "formal_experiment_completed": false,
+  "formal_280_results": "按另行计划执行",
+  "full_split_quality": "按另行计划执行",
+  "fa2": "独立预审，非本次终稿",
+  "sealed_files": 102,
+  "public_templates": 96,
+  "private_author_dependencies": 6,
+  "composite_release_sha256": "35fbf088f3111f7f0fd7e87d0f18e1a0cff12b34f24cd3083679f2f69f4474e1",
+  "components": {
+    "r4_base": {
+      "state": "passed",
+      "jobs": 26,
+      "natural_eos_generations": 316,
+      "evidence": "../native_20261012_r4/VALIDATION_20261012_R4.json",
+      "scope": "bounded regression"
+    },
+    "qwen_illava_r5": {
+      "state": "passed",
+      "natural_eos_generations": 24,
+      "evidence": "../native_20261012_r5/VALIDATION.json",
+      "qk32_retained": true
+    },
+    "smol_half_r6": {
+      "state": "passed",
+      "source_sha256": "94a840db5a4d940d7344994c493cb24d72a8ed43d634e59628025033e0107d7e",
+      "cpu_tests": 38,
+      "cpu_rounding_cells": 4,
+      "cuda_rounding_cells": 4,
+      "skipped": 0,
+      "hardware": "Tesla V100-SXM2-32GB",
+      "units_per_precision": 14,
+      "natural_eos_generations": 28,
+      "precisions": [
+        "float16",
+        "float32"
+      ],
+      "original_image_count": 5,
+      "request_batch_size": 1,
+      "author_fp16_rounding": true,
+      "dtype_compatible_scatter": true,
+      "method_activation": true,
+      "dense_restoration": true,
+      "journal_crc_export": true,
+      "evidence": "VALIDATION.json",
+      "receipt_sha256": "45fc777c1d869317437ac1b9ecf4d0959fd3c9351266a50287d780951774bdba"
+    },
+    "llava_dtome_clone": {
+      "state": "passed",
+      "source_sha256": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
+      "source_package_sha256": "5eeea6e7810b55c376905c13b20d65d2b444a11ead4a118a29a0f2adfa9e5028",
+      "natural_eos_generations": 18,
+      "float16": {
+        "hardware": "Tesla V100-SXM2-32GB",
+        "units": 9,
+        "worker_exit": 0,
+        "cpu_tests": 8
+      },
+      "float32": {
+        "hardware": "NVIDIA A800-SXM4-80GB",
+        "units": 9,
+        "worker_exit": 0,
+        "cpu_tests": 8
+      },
+      "single_and_five_image_requests": true,
+      "method_activation": true,
+      "dense_restoration": true,
+      "journal_crc_export": true,
+      "clone_inside_vit_timing": true,
+      "independent_audit": "passed",
+      "cpu_membership_counterexample": {
+        "state": "passed",
+        "python": "3.13.0",
+        "torch": "2.11.0+cpu",
+        "device": "cpu",
+        "source_sha256": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
+        "input_membership_unchanged": true,
+        "column_sums_all_one": true,
+        "saved_restore_slot2_is_30": true,
+        "input_size_unchanged": true,
+        "returned_membership_size_padding_correct": true,
+        "receipt_sha256": "8a0f338d1ba0e7b77b52ee88887095c2f414ed3e690434c4595438dfe165fa0f"
+      },
+      "evidence": "../../models/llava15-7b/dymu/VALIDATION_20261013.json"
+    }
+  },
+  "known_warning": "No-delete guard blocks temporary-directory cleanup at interpreter exit after successful inference/audit; worker exit codes remain 0.",
+  "image_validation": "skipped by user request",
+  "private_sources": "Six author/mixed files remain local hash-pinned dependencies; their full source is not redistributed."
+}

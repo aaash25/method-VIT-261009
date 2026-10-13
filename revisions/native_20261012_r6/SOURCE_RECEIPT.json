@@ -1,18 +1,16 @@
 {
-  "state": "built",
-  "base": "r5",
-  "release": "r6",
-  "changed": [
-    "smol/BUNDLE_SHA256.json",
-    "smol/smol_merge_ports.py"
+  "state": "published_source_composition_prepared",
+  "version": "native_20261013_final",
+  "base_public_commit": "0f8c0d7a0bc4b7ef39709f5011062abf02833a26",
+  "sealed_files": 102,
+  "composition": "r6 plus accepted LLaVA DToMe clone core, test and bundle",
+  "changed_relative_to_private_r6": [
+    "llava/BUNDLE_SHA256.json",
+    "llava/author_dymu_core.py",
+    "llava/test_deferred_native.py"
   ],
-  "added": [
-    "smol/test_half_rounding.py"
-  ],
-  "runtime_change": "Smol iLLaVA pooled.half().to(x.dtype)",
-  "other_models_unchanged": true,
-  "qwen_qk32_preserved": true,
-  "red_failed_for_missing_rounding": true,
-  "green_passed": true,
-  "formal_run": false
+  "source_changed_relative_to_current_main": false,
+  "source_manifest_sha256": "35fbf088f3111f7f0fd7e87d0f18e1a0cff12b34f24cd3083679f2f69f4474e1",
+  "composite_gpu_executed": false,
+  "acceptance": "FINAL_ACCEPTANCE_20261013.json"
 }

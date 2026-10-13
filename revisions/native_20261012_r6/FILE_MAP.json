@@ -1,5 +1,5 @@
 {
-  "version": "native_release_20261012_r6",
+  "version": "native_20261013_final",
   "placeholder": "@PROJECT_ROOT@",
   "files": [
     {
@@ -706,7 +706,6 @@
     }
   ],
   "scope": "102 sealed files, 96 public templates, six local author dependencies",
-  "release_archive_sha256": "2a7db20e1f0fbc10438e80c0a6ca31d38e8788e4ea710039b51d32906ea277c1",
   "component_updates": {
     "llava_dtome": {
       "version": "20261013",
@@ -724,5 +723,16 @@
       "validation": "../../models/llava15-7b/dymu/VALIDATION_20261013.json",
       "other_combinations_finalized": false
     }
+  },
+  "base_release_archive_sha256": "2a7db20e1f0fbc10438e80c0a6ca31d38e8788e4ea710039b51d32906ea277c1",
+  "composite_release_sha256": "35fbf088f3111f7f0fd7e87d0f18e1a0cff12b34f24cd3083679f2f69f4474e1",
+  "composite_release_manifest": "RELEASE_SHA256.json",
+  "acceptance": {
+    "status": "FINAL",
+    "closed_combinations": 32,
+    "basis": "Inherited passed component acceptances; no new composite GPU execution",
+    "composite_gpu_executed": false,
+    "validation": "FINAL_ACCEPTANCE_20261013.json",
+    "index": "FINAL_METHOD_INDEX_20261013.json"
   }
 }
