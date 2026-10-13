@@ -1,0 +1,2667 @@
+{
+  "state": "passed",
+  "accepted_status": "final by user instruction on 2026-10-13",
+  "accepted_combinations": [
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "DToMe",
+      "dtype": "float16"
+    },
+    {
+      "model": "LLaVA-1.5-7B",
+      "method": "DToMe",
+      "dtype": "float32"
+    }
+  ],
+  "package_sha256": "5eeea6e7810b55c376905c13b20d65d2b444a11ead4a118a29a0f2adfa9e5028",
+  "source_files": {
+    "audit_outputs.py": "793bbfc666c02adda29d33ceca73e363af64746014e5e70411cd00e0c72a7681",
+    "llava/BASE_SOURCES_SHA256.json": "9d5e3e63539db4ae99f901554cbf65cee2a99b3ffcba5914f0e6bfa5cfed8bed",
+    "llava/BUNDLE_SHA256.json": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
+    "llava/author_dymu_bridge.py": "b5272439e0b2ad325681a6cbca2b25098ff5a17f72ee4753d2c3cc236fee2d6d",
+    "llava/author_dymu_core.py": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
+    "llava/diagnostic_guard.py": "2d6253e909102a579d54361145b54d0b2d5fa20aec5b2ba9cfcc6d8962ac6391",
+    "llava/launch.py": "dc7cede577d91e11ded0cdca0150f40d9405f5099ec2f0b21326333d67090895",
+    "llava/request_meter.py": "ee1aa4d7ac23c339967b037f5d7e8fc2946b15813376188bad9ef19dc8f13f64",
+    "llava/test_deferred_native.py": "5ec7dcb562f74d6d782713d9ccad646ce77ed02124134c5a321b21d61e9c246f",
+    "llava/worker.py": "4c8f96aaef36574fd372d19b7a13a7afdb5ae30bf0dfc01c0deedfa4141701c3"
+  },
+  "sealed_package_source_pins_checked": 99,
+  "method_source_changed_for_publication": false,
+  "scope": "Bounded representative-question GPU regression; not a full-split accuracy or performance result",
+  "image_validation": "skipped by user request",
+  "request_batch_size": 1,
+  "cross_question_vit_reuse": false,
+  "candidate_historical_identity_required": false,
+  "precisions": {
+    "float16": {
+      "hardware": "Tesla V100-SXM2-32GB, 32768 MiB",
+      "units": 9,
+      "cpu_tests": 8,
+      "datasets": [
+        "POPE/0",
+        "HRBench4K/0",
+        "MMMU_val/3414"
+      ],
+      "modes": [
+        "dense",
+        "fixed_candidate",
+        "restored_dense"
+      ],
+      "wall_seconds": 137.68123740400188,
+      "peak_allocated_GiB": 17.836,
+      "independent_server_audit": {
+        "state": "passed",
+        "units": 9,
+        "crc_journal_export_eos_dense_and_timer_order": true,
+        "candidate_historical_identity_required": false,
+        "image_validation": "skipped by user request"
+      },
+      "independent_download_audit": "passed",
+      "dtome_layers": 24,
+      "mmmu_per_image_nonincreasing": true,
+      "first_counts": [
+        409,
+        382,
+        374,
+        385,
+        395
+      ],
+      "last_counts": [
+        37,
+        45,
+        42,
+        41,
+        42
+      ],
+      "gpu_worker_exit_code": 0,
+      "requests": [
+        {
+          "dataset": "HRBench4K",
+          "request_id": "0",
+          "mode": "dense",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 15.72735805530101,
+          "e2e_ms": 553.1350550008938,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 15647437824,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "HRBench4K",
+          "request_id": "0",
+          "mode": "fixed_candidate",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 38.63234200980514,
+          "e2e_ms": 578.6305899964646,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 15647438336,
+          "method_active": true,
+          "trace": [
+            {
+              "layer_zero_based": 0,
+              "input_tokens_per_image": [
+                577
+              ],
+              "output_tokens_per_image": [
+                546
+              ],
+              "padded_output_tokens": 546
+            },
+            {
+              "layer_zero_based": 1,
+              "input_tokens_per_image": [
+                546
+              ],
+              "output_tokens_per_image": [
+                474
+              ],
+              "padded_output_tokens": 474
+            },
+            {
+              "layer_zero_based": 2,
+              "input_tokens_per_image": [
+                474
+              ],
+              "output_tokens_per_image": [
+                402
+              ],
+              "padded_output_tokens": 402
+            },
+            {
+              "layer_zero_based": 3,
+              "input_tokens_per_image": [
+                402
+              ],
+              "output_tokens_per_image": [
+                379
+              ],
+              "padded_output_tokens": 379
+            },
+            {
+              "layer_zero_based": 4,
+              "input_tokens_per_image": [
+                379
+              ],
+              "output_tokens_per_image": [
+                340
+              ],
+              "padded_output_tokens": 340
+            },
+            {
+              "layer_zero_based": 5,
+              "input_tokens_per_image": [
+                340
+              ],
+              "output_tokens_per_image": [
+                316
+              ],
+              "padded_output_tokens": 316
+            },
+            {
+              "layer_zero_based": 6,
+              "input_tokens_per_image": [
+                316
+              ],
+              "output_tokens_per_image": [
+                314
+              ],
+              "padded_output_tokens": 314
+            },
+            {
+              "layer_zero_based": 7,
+              "input_tokens_per_image": [
+                314
+              ],
+              "output_tokens_per_image": [
+                300
+              ],
+              "padded_output_tokens": 300
+            },
+            {
+              "layer_zero_based": 8,
+              "input_tokens_per_image": [
+                300
+              ],
+              "output_tokens_per_image": [
+                279
+              ],
+              "padded_output_tokens": 279
+            },
+            {
+              "layer_zero_based": 9,
+              "input_tokens_per_image": [
+                279
+              ],
+              "output_tokens_per_image": [
+                273
+              ],
+              "padded_output_tokens": 273
+            },
+            {
+              "layer_zero_based": 10,
+              "input_tokens_per_image": [
+                273
+              ],
+              "output_tokens_per_image": [
+                262
+              ],
+              "padded_output_tokens": 262
+            },
+            {
+              "layer_zero_based": 11,
+              "input_tokens_per_image": [
+                262
+              ],
+              "output_tokens_per_image": [
+                252
+              ],
+              "padded_output_tokens": 252
+            },
+            {
+              "layer_zero_based": 12,
+              "input_tokens_per_image": [
+                252
+              ],
+              "output_tokens_per_image": [
+                245
+              ],
+              "padded_output_tokens": 245
+            },
+            {
+              "layer_zero_based": 13,
+              "input_tokens_per_image": [
+                245
+              ],
+              "output_tokens_per_image": [
+                224
+              ],
+              "padded_output_tokens": 224
+            },
+            {
+              "layer_zero_based": 14,
+              "input_tokens_per_image": [
+                224
+              ],
+              "output_tokens_per_image": [
+                219
+              ],
+              "padded_output_tokens": 219
+            },
+            {
+              "layer_zero_based": 15,
+              "input_tokens_per_image": [
+                219
+              ],
+              "output_tokens_per_image": [
+                208
+              ],
+              "padded_output_tokens": 208
+            },
+            {
+              "layer_zero_based": 16,
+              "input_tokens_per_image": [
+                208
+              ],
+              "output_tokens_per_image": [
+                196
+              ],
+              "padded_output_tokens": 196
+            },
+            {
+              "layer_zero_based": 17,
+              "input_tokens_per_image": [
+                196
+              ],
+              "output_tokens_per_image": [
+                185
+              ],
+              "padded_output_tokens": 185
+            },
+            {
+              "layer_zero_based": 18,
+              "input_tokens_per_image": [
+                185
+              ],
+              "output_tokens_per_image": [
+                183
+              ],
+              "padded_output_tokens": 183
+            },
+            {
+              "layer_zero_based": 19,
+              "input_tokens_per_image": [
+                183
+              ],
+              "output_tokens_per_image": [
+                176
+              ],
+              "padded_output_tokens": 176
+            },
+            {
+              "layer_zero_based": 20,
+              "input_tokens_per_image": [
+                176
+              ],
+              "output_tokens_per_image": [
+                170
+              ],
+              "padded_output_tokens": 170
+            },
+            {
+              "layer_zero_based": 21,
+              "input_tokens_per_image": [
+                170
+              ],
+              "output_tokens_per_image": [
+                163
+              ],
+              "padded_output_tokens": 163
+            },
+            {
+              "layer_zero_based": 22,
+              "input_tokens_per_image": [
+                163
+              ],
+              "output_tokens_per_image": [
+                118
+              ],
+              "padded_output_tokens": 118
+            },
+            {
+              "layer_zero_based": 23,
+              "input_tokens_per_image": [
+                118
+              ],
+              "output_tokens_per_image": [
+                90
+              ],
+              "padded_output_tokens": 90
+            }
+          ]
+        },
+        {
+          "dataset": "HRBench4K",
+          "request_id": "0",
+          "mode": "restored_dense",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 15.67867596168071,
+          "e2e_ms": 553.3883549505845,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 15647438336,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "MMMU_val",
+          "request_id": "3414",
+          "mode": "dense",
+          "image_count": 5,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 63.04412498138845,
+          "e2e_ms": 1157.1488049812615,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 19151229952,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "MMMU_val",
+          "request_id": "3414",
+          "mode": "fixed_candidate",
+          "image_count": 5,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 72.96558597590774,
+          "e2e_ms": 1165.5861570034176,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 19151262208,
+          "method_active": true,
+          "trace": [
+            {
+              "layer_zero_based": 0,
+              "input_tokens_per_image": [
+                577,
+                577,
+                577,
+                577,
+                577
+              ],
+              "output_tokens_per_image": [
+                409,
+                382,
+                374,
+                385,
+                395
+              ],
+              "padded_output_tokens": 409
+            },
+            {
+              "layer_zero_based": 1,
+              "input_tokens_per_image": [
+                409,
+                382,
+                374,
+                385,
+                395
+              ],
+              "output_tokens_per_image": [
+                279,
+                266,
+                256,
+                272,
+                266
+              ],
+              "padded_output_tokens": 279
+            },
+            {
+              "layer_zero_based": 2,
+              "input_tokens_per_image": [
+                279,
+                266,
+                256,
+                272,
+                266
+              ],
+              "output_tokens_per_image": [
+                244,
+                220,
+                206,
+                218,
+                218
+              ],
+              "padded_output_tokens": 244
+            },
+            {
+              "layer_zero_based": 3,
+              "input_tokens_per_image": [
+                244,
+                220,
+                206,
+                218,
+                218
+              ],
+              "output_tokens_per_image": [
+                236,
+                208,
+                201,
+                206,
+                206
+              ],
+              "padded_output_tokens": 236
+            },
+            {
+              "layer_zero_based": 4,
+              "input_tokens_per_image": [
+                236,
+                208,
+                201,
+                206,
+                206
+              ],
+              "output_tokens_per_image": [
+                222,
+                197,
+                188,
+                198,
+                198
+              ],
+              "padded_output_tokens": 222
+            },
+            {
+              "layer_zero_based": 5,
+              "input_tokens_per_image": [
+                222,
+                197,
+                188,
+                198,
+                198
+              ],
+              "output_tokens_per_image": [
+                213,
+                191,
+                182,
+                190,
+                191
+              ],
+              "padded_output_tokens": 213
+            },
+            {
+              "layer_zero_based": 6,
+              "input_tokens_per_image": [
+                213,
+                191,
+                182,
+                190,
+                191
+              ],
+              "output_tokens_per_image": [
+                211,
+                191,
+                178,
+                187,
+                188
+              ],
+              "padded_output_tokens": 211
+            },
+            {
+              "layer_zero_based": 7,
+              "input_tokens_per_image": [
+                211,
+                191,
+                178,
+                187,
+                188
+              ],
+              "output_tokens_per_image": [
+                203,
+                185,
+                177,
+                183,
+                183
+              ],
+              "padded_output_tokens": 203
+            },
+            {
+              "layer_zero_based": 8,
+              "input_tokens_per_image": [
+                203,
+                185,
+                177,
+                183,
+                183
+              ],
+              "output_tokens_per_image": [
+                196,
+                184,
+                171,
+                175,
+                175
+              ],
+              "padded_output_tokens": 196
+            },
+            {
+              "layer_zero_based": 9,
+              "input_tokens_per_image": [
+                196,
+                184,
+                171,
+                175,
+                175
+              ],
+              "output_tokens_per_image": [
+                194,
+                181,
+                171,
+                173,
+                171
+              ],
+              "padded_output_tokens": 194
+            },
+            {
+              "layer_zero_based": 10,
+              "input_tokens_per_image": [
+                194,
+                181,
+                171,
+                173,
+                171
+              ],
+              "output_tokens_per_image": [
+                185,
+                172,
+                163,
+                166,
+                160
+              ],
+              "padded_output_tokens": 185
+            },
+            {
+              "layer_zero_based": 11,
+              "input_tokens_per_image": [
+                185,
+                172,
+                163,
+                166,
+                160
+              ],
+              "output_tokens_per_image": [
+                168,
+                159,
+                154,
+                157,
+                151
+              ],
+              "padded_output_tokens": 168
+            },
+            {
+              "layer_zero_based": 12,
+              "input_tokens_per_image": [
+                168,
+                159,
+                154,
+                157,
+                151
+              ],
+              "output_tokens_per_image": [
+                160,
+                155,
+                151,
+                151,
+                144
+              ],
+              "padded_output_tokens": 160
+            },
+            {
+              "layer_zero_based": 13,
+              "input_tokens_per_image": [
+                160,
+                155,
+                151,
+                151,
+                144
+              ],
+              "output_tokens_per_image": [
+                139,
+                143,
+                139,
+                136,
+                133
+              ],
+              "padded_output_tokens": 143
+            },
+            {
+              "layer_zero_based": 14,
+              "input_tokens_per_image": [
+                139,
+                143,
+                139,
+                136,
+                133
+              ],
+              "output_tokens_per_image": [
+                128,
+                130,
+                135,
+                132,
+                126
+              ],
+              "padded_output_tokens": 135
+            },
+            {
+              "layer_zero_based": 15,
+              "input_tokens_per_image": [
+                128,
+                130,
+                135,
+                132,
+                126
+              ],
+              "output_tokens_per_image": [
+                112,
+                123,
+                123,
+                122,
+                112
+              ],
+              "padded_output_tokens": 123
+            },
+            {
+              "layer_zero_based": 16,
+              "input_tokens_per_image": [
+                112,
+                123,
+                123,
+                122,
+                112
+              ],
+              "output_tokens_per_image": [
+                94,
+                113,
+                106,
+                114,
+                94
+              ],
+              "padded_output_tokens": 114
+            },
+            {
+              "layer_zero_based": 17,
+              "input_tokens_per_image": [
+                94,
+                113,
+                106,
+                114,
+                94
+              ],
+              "output_tokens_per_image": [
+                83,
+                95,
+                97,
+                106,
+                86
+              ],
+              "padded_output_tokens": 106
+            },
+            {
+              "layer_zero_based": 18,
+              "input_tokens_per_image": [
+                83,
+                95,
+                97,
+                106,
+                86
+              ],
+              "output_tokens_per_image": [
+                78,
+                81,
+                87,
+                95,
+                76
+              ],
+              "padded_output_tokens": 95
+            },
+            {
+              "layer_zero_based": 19,
+              "input_tokens_per_image": [
+                78,
+                81,
+                87,
+                95,
+                76
+              ],
+              "output_tokens_per_image": [
+                72,
+                71,
+                80,
+                79,
+                66
+              ],
+              "padded_output_tokens": 80
+            },
+            {
+              "layer_zero_based": 20,
+              "input_tokens_per_image": [
+                72,
+                71,
+                80,
+                79,
+                66
+              ],
+              "output_tokens_per_image": [
+                63,
+                64,
+                71,
+                73,
+                61
+              ],
+              "padded_output_tokens": 73
+            },
+            {
+              "layer_zero_based": 21,
+              "input_tokens_per_image": [
+                63,
+                64,
+                71,
+                73,
+                61
+              ],
+              "output_tokens_per_image": [
+                59,
+                61,
+                64,
+                70,
+                55
+              ],
+              "padded_output_tokens": 70
+            },
+            {
+              "layer_zero_based": 22,
+              "input_tokens_per_image": [
+                59,
+                61,
+                64,
+                70,
+                55
+              ],
+              "output_tokens_per_image": [
+                44,
+                48,
+                47,
+                49,
+                45
+              ],
+              "padded_output_tokens": 49
+            },
+            {
+              "layer_zero_based": 23,
+              "input_tokens_per_image": [
+                44,
+                48,
+                47,
+                49,
+                45
+              ],
+              "output_tokens_per_image": [
+                37,
+                45,
+                42,
+                41,
+                42
+              ],
+              "padded_output_tokens": 45
+            }
+          ]
+        },
+        {
+          "dataset": "MMMU_val",
+          "request_id": "3414",
+          "mode": "restored_dense",
+          "image_count": 5,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 63.057808903977275,
+          "e2e_ms": 1158.719502040185,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 19151262208,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "POPE",
+          "request_id": "0",
+          "mode": "dense",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "97212ae0d72383be73e7b998820729eb270a2f08df069f4f62af8e7ccf4c5fc8",
+          "output_text_sha256": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 22.053514956496656,
+          "e2e_ms": 441.05188304092735,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 15607682560,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "POPE",
+          "request_id": "0",
+          "mode": "fixed_candidate",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "97212ae0d72383be73e7b998820729eb270a2f08df069f4f62af8e7ccf4c5fc8",
+          "output_text_sha256": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 52.20112903043628,
+          "e2e_ms": 243.42657392844558,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 15607700480,
+          "method_active": true,
+          "trace": [
+            {
+              "layer_zero_based": 0,
+              "input_tokens_per_image": [
+                577
+              ],
+              "output_tokens_per_image": [
+                519
+              ],
+              "padded_output_tokens": 519
+            },
+            {
+              "layer_zero_based": 1,
+              "input_tokens_per_image": [
+                519
+              ],
+              "output_tokens_per_image": [
+                463
+              ],
+              "padded_output_tokens": 463
+            },
+            {
+              "layer_zero_based": 2,
+              "input_tokens_per_image": [
+                463
+              ],
+              "output_tokens_per_image": [
+                424
+              ],
+              "padded_output_tokens": 424
+            },
+            {
+              "layer_zero_based": 3,
+              "input_tokens_per_image": [
+                424
+              ],
+              "output_tokens_per_image": [
+                368
+              ],
+              "padded_output_tokens": 368
+            },
+            {
+              "layer_zero_based": 4,
+              "input_tokens_per_image": [
+                368
+              ],
+              "output_tokens_per_image": [
+                330
+              ],
+              "padded_output_tokens": 330
+            },
+            {
+              "layer_zero_based": 5,
+              "input_tokens_per_image": [
+                330
+              ],
+              "output_tokens_per_image": [
+                305
+              ],
+              "padded_output_tokens": 305
+            },
+            {
+              "layer_zero_based": 6,
+              "input_tokens_per_image": [
+                305
+              ],
+              "output_tokens_per_image": [
+                299
+              ],
+              "padded_output_tokens": 299
+            },
+            {
+              "layer_zero_based": 7,
+              "input_tokens_per_image": [
+                299
+              ],
+              "output_tokens_per_image": [
+                293
+              ],
+              "padded_output_tokens": 293
+            },
+            {
+              "layer_zero_based": 8,
+              "input_tokens_per_image": [
+                293
+              ],
+              "output_tokens_per_image": [
+                268
+              ],
+              "padded_output_tokens": 268
+            },
+            {
+              "layer_zero_based": 9,
+              "input_tokens_per_image": [
+                268
+              ],
+              "output_tokens_per_image": [
+                264
+              ],
+              "padded_output_tokens": 264
+            },
+            {
+              "layer_zero_based": 10,
+              "input_tokens_per_image": [
+                264
+              ],
+              "output_tokens_per_image": [
+                253
+              ],
+              "padded_output_tokens": 253
+            },
+            {
+              "layer_zero_based": 11,
+              "input_tokens_per_image": [
+                253
+              ],
+              "output_tokens_per_image": [
+                242
+              ],
+              "padded_output_tokens": 242
+            },
+            {
+              "layer_zero_based": 12,
+              "input_tokens_per_image": [
+                242
+              ],
+              "output_tokens_per_image": [
+                234
+              ],
+              "padded_output_tokens": 234
+            },
+            {
+              "layer_zero_based": 13,
+              "input_tokens_per_image": [
+                234
+              ],
+              "output_tokens_per_image": [
+                215
+              ],
+              "padded_output_tokens": 215
+            },
+            {
+              "layer_zero_based": 14,
+              "input_tokens_per_image": [
+                215
+              ],
+              "output_tokens_per_image": [
+                213
+              ],
+              "padded_output_tokens": 213
+            },
+            {
+              "layer_zero_based": 15,
+              "input_tokens_per_image": [
+                213
+              ],
+              "output_tokens_per_image": [
+                202
+              ],
+              "padded_output_tokens": 202
+            },
+            {
+              "layer_zero_based": 16,
+              "input_tokens_per_image": [
+                202
+              ],
+              "output_tokens_per_image": [
+                193
+              ],
+              "padded_output_tokens": 193
+            },
+            {
+              "layer_zero_based": 17,
+              "input_tokens_per_image": [
+                193
+              ],
+              "output_tokens_per_image": [
+                188
+              ],
+              "padded_output_tokens": 188
+            },
+            {
+              "layer_zero_based": 18,
+              "input_tokens_per_image": [
+                188
+              ],
+              "output_tokens_per_image": [
+                183
+              ],
+              "padded_output_tokens": 183
+            },
+            {
+              "layer_zero_based": 19,
+              "input_tokens_per_image": [
+                183
+              ],
+              "output_tokens_per_image": [
+                179
+              ],
+              "padded_output_tokens": 179
+            },
+            {
+              "layer_zero_based": 20,
+              "input_tokens_per_image": [
+                179
+              ],
+              "output_tokens_per_image": [
+                166
+              ],
+              "padded_output_tokens": 166
+            },
+            {
+              "layer_zero_based": 21,
+              "input_tokens_per_image": [
+                166
+              ],
+              "output_tokens_per_image": [
+                161
+              ],
+              "padded_output_tokens": 161
+            },
+            {
+              "layer_zero_based": 22,
+              "input_tokens_per_image": [
+                161
+              ],
+              "output_tokens_per_image": [
+                105
+              ],
+              "padded_output_tokens": 105
+            },
+            {
+              "layer_zero_based": 23,
+              "input_tokens_per_image": [
+                105
+              ],
+              "output_tokens_per_image": [
+                74
+              ],
+              "padded_output_tokens": 74
+            }
+          ]
+        },
+        {
+          "dataset": "POPE",
+          "request_id": "0",
+          "mode": "restored_dense",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "97212ae0d72383be73e7b998820729eb270a2f08df069f4f62af8e7ccf4c5fc8",
+          "output_text_sha256": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 15.813664998859167,
+          "e2e_ms": 205.95077599864453,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 15607700480,
+          "method_active": false,
+          "trace": []
+        }
+      ],
+      "native_runtime_source": {
+        "author_dymu_bridge.py": "b5272439e0b2ad325681a6cbca2b25098ff5a17f72ee4753d2c3cc236fee2d6d",
+        "author_dymu_core.py": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
+        "diagnostic_guard.py": "2d6253e909102a579d54361145b54d0b2d5fa20aec5b2ba9cfcc6d8962ac6391",
+        "launch.py": "dc7cede577d91e11ded0cdca0150f40d9405f5099ec2f0b21326333d67090895",
+        "request_meter.py": "ee1aa4d7ac23c339967b037f5d7e8fc2946b15813376188bad9ef19dc8f13f64",
+        "test_deferred_native.py": "5ec7dcb562f74d6d782713d9ccad646ce77ed02124134c5a321b21d61e9c246f",
+        "worker.py": "4c8f96aaef36574fd372d19b7a13a7afdb5ae30bf0dfc01c0deedfa4141701c3",
+        "BASE_SOURCES_SHA256.json": "9d5e3e63539db4ae99f901554cbf65cee2a99b3ffcba5914f0e6bfa5cfed8bed"
+      },
+      "frozen_base_sources": {
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/.ipynb_checkpoints/run_job-checkpoint.py": "1cee29233a3d07a78221461d3c645c38c826c0c037154e9de41d9192df4fbbd7",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/audit.py": "911baf21c2e8980ddb23f06fa8a3ffa7061bf716b1c8615024ab9b193a52978c",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/audit_manifests.py": "9664c8a6960fbfdad8b56b11ca93ad6b2aca50ec9f1eb892e0f03d555b62ebbd",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/audit_smoke.py": "d6291d51bda65a23382a0ed6668b5b8972fe0e922df4e7ffa43f68c76d73e962",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/build_bundle.py": "96218a7eba4f4ce641405789408ae14c5e6af9a621a7c818e52f4445135ade9e",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/campaign_preflight.py": "e1e3ec3a7010381765220633a6dce14fbd5c1332dbe29b8ddc2aa7ad03d252f1",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/check_environment.py": "e323963004161e1cdca6af1eb1a2e98740886c91226f88e103b34d5aa05a6951",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/checkpoint_journal.py": "800b39ac2b301425bce8d7386a12d433c7f718a318e524dcff2c53f74e80f7c4",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/dataset_registry.py": "e373b59d4ca54509c9dc638376db38067365c69f13151a72e659f8652bf65b63",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/fidelity_policy.py": "2127cef38e09024e92eb40820093b760b60ba5c61bde6ba3d80c47aad64c6be5",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/author_dymu_bridge.py": "b30538f7c8df30cf2c36c746c17f49c645a39b858a74d1abc4a4a47094fa06df",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/author_dymu_core.py": "ffc9bac8e60b1553869b41c1733ffc77ba3d474df803425bfeda1e27da01be39",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/clip_peer_ports.py": "f013f96f35bba154713d4821669e828557a66a7a2e9d37f83e9aabc5540abd56",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ipcv_clip_batch.py": "86c073c4f7d31255046057df09b29b535e87846423f03bcba0adb44d9229473e",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/llava_vision_loader.py": "5707df02ba2b1bbdbb8d4c8698fd510acbb4427190c4656694082b418e451bf0",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_fp16_port/pack_restore_triton.py": "944820ebd0fe4a4a2062c739ee7c46ddd7665ed68b77860f9ff869e8ae881e5f",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/adapter_h253_reference.py": "4f29e5ce75c2a6bf97a482525cb418f9a708add6fb8f1fa317b5624599ca0df7",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/adapter_pack_restore_eager.py": "318c5270cddbdeacf65c274f6ee485febc37510201612377a8b1ef1facb8b0b0",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/adapter_pack_restore_triton.py": "63122dd48c5f2057890b1ad3864d1b6cb15a9ec1bfce4e35972c2721d599c85c",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/adapter_q_fused_eager.py": "dc41f4a2b4c92c776471458819e03830a0e7e596fd851c0b67e6074d09e4efec",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/adapter_triton_eager.py": "bee2b6e4c91ae8a15853938036f403b1058725bbd182f1243c96c2dbba3356fa",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/adapter_triton_relation.py": "9e4f801031176d3218e23ae05f49c3c77f1c08d4ad43f7aff087144398cab120",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/attention_restore_triton.py": "99007ca0ac5e919ea84735411a179451c3cd36c05b708b60c84dcdbf89a0026c",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/layout.py": "dc1a630dd03c2cbbf1832233e9d7a4a3ecf8ea19996d932ccf3573972d26de66",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/pack_restore_triton.py": "e17e2d55463c505d678180d66dee726382d6d14da5330231157ab89687ab5903",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/ours_h297/relation_triton.py": "26801a0178d3a806a886a325a62f5314cf6061cb80634d42bb7a00a32045121a",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/peer_port_core.py": "797d2c1ab6306ef59471a80f800f6e7e56769adf6ee5d82511be94aff09045bf",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/pitome_author_fp16.py": "b058fcae583b4eea2d10d477ed780aa87e08efbf34a36d2e72d34b65263d0a66",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/frozen_sources/run_port_job.py": "8dd82b1824e3de1da24b888b975a7768b2854455a09454189019b693207acb6e",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/grid.py": "4e694bffb66f91571808d4522784832352c12adb58db577afe59fe313b9598ca",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/launch_contract.py": "f8e1039496c845b7debdf281170f8c403dc7fcdd8f102144c9b46eeb71044929",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/launch_plan.py": "23609aab7a986b59e1287012aedd6bf1357d639d6cbe63a3a5dc1c4293d40032",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/llava_runtime.py": "20864bf284d5c49e8dbfc9dcf90015764df2ad8946097985343bdb63463f252a",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/prepare_manifests.py": "511ba0e7eed46c53811e626085e80d98f35ae2e1aae60f3c9d731a277e2f3596",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/prepare_timing.py": "888492955f3afc01591cc027b2366923810430966b9c9ac017a5e17de2c00455",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/prompting.py": "b2e86a7a7be61726ac48c7397dff7dcfaabe68a46fa94ce5d2c03f678c016a37",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/release_integrity.py": "4e8ffd52d0f4eb42e42a1d27e2ec28c7ae4461b8defb443c4ceda323f4f58073",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/run_job.py": "1cee29233a3d07a78221461d3c645c38c826c0c037154e9de41d9192df4fbbd7",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/score_all.py": "d380207d35132c3bfef7e644115742795f1b9a7f5be86f87d5eda9f593ac61cf",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/score_predictions.py": "eb0f3c7edb2540c11b34e83ede958b8d916f6190d9aab75005001b6cbf796cf0",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/show_progress.py": "2abcd7eedf434cf751bf18ebe3c53240955ff9dea8c0304dde0c057d46580b2a",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/test_contract.py": "fa8cf293460e20a664523ce9df1bda0b7ec7bc3b7cd1acca47a1f52e440f9183",
+        "route/hypotheses/v610_h302_llava15_five_method_smolvlm_aligned/verify_bundle.py": "d6e1203254414dc1782e568baf788c5bec9e6053481a6896f5d4138f21a7aeac"
+      },
+      "external_execution_controller_sha256": "35b54280b83f245e191d8544d0fdad95d1d30b5f27dd45cc2de92c218ad6f276",
+      "private_evidence_archive": {
+        "name": "20261013T085453_llava_dtome_float16_evidence.zip",
+        "sha256": "93773ea5ea596b5f1f9ad7f34ce02a3a728cce037605808516163e9112569352"
+      },
+      "timing_boundary": "Pure ViT and whole original request observed simultaneously in one complete generation; E2E includes observer hooks/synchronization; regression samples only",
+      "wall_seconds_is_performance_evidence": false,
+      "runtime_identity": {
+        "stack": {
+          "packages": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.57.6",
+            "tokenizers": "0.22.2",
+            "sentencepiece": "0.2.2",
+            "protobuf": "7.36.2",
+            "triton": "3.1.0",
+            "accelerate": "1.14.0",
+            "numpy": "2.4.6",
+            "pillow": "12.3.0",
+            "safetensors": "0.8.0",
+            "huggingface-hub": "0.36.2",
+            "setuptools": "84.0.0"
+          },
+          "environment_lock_sha256": "e52c6e56857f2ca986c8a3c3ca6c6c70043142236387a4ae640d4a6bdc803b2c",
+          "job": 2,
+          "method": "dtome",
+          "dtype": "float16",
+          "gpu": "Tesla V100-SXM2-32GB",
+          "gpu_memory_bytes": 34072559616,
+          "target_gpu": "V100",
+          "python": "3.11.16",
+          "torch": "2.5.1+cu121",
+          "cuda": "12.1",
+          "transformers": "4.57.6",
+          "attention": "eager",
+          "tf32": false,
+          "threads": 2,
+          "deterministic_algorithms": false
+        },
+        "model_id": "llava-hf/llava-1.5-7b-hf",
+        "model_revision": "b234b804b114d9e37bb655e11cbbb5f5e971b7a9",
+        "tokenizer_class": "LlamaTokenizerFast",
+        "tokenizer_use_fast": true,
+        "assistant_suffix_trailing_space": false,
+        "candidate_vision_attention": "author torch.nn.MultiheadAttention need_weights=False; existing PyTorch dispatch setting unchanged",
+        "primary_dense_vision_attention": "canonical HF CLIP eager (original r7 timing contract)",
+        "native_disabled_diagnostic_attention": "author MultiheadAttention r_total=0; existing dispatch setting unchanged; diagnostic only",
+        "native_mha_fastpath_enabled_at_load": true,
+        "canonical_dense_and_llm_attention": "HF eager"
+      },
+      "model_processor_tokenizer_asset_sha256": {
+        "config.json": "0bde54495c54bcc346064a0d314b010d1c4d3ca7f7e583b6f711949a35352c0f",
+        "preprocessor_config.json": "a8d5e64ee5c07ff6d70142856d178ac39d0563da3612e32110fa824f5337b7a1",
+        "processor_config.json": "fef918d6ba333f72a066877965bc4a162308568ba62aa90c806caedf7b45d64e",
+        "model-00003-of-00003.safetensors": "4f06177c37ca13944e73b57dd6d051767b950dffc12400c700dfa2509c24c697",
+        "model-00001-of-00003.safetensors": "c11dbf016ee7d35ee130c19b67e20eb04873996006f424b7bcbd453b6517ee66",
+        "model-00002-of-00003.safetensors": "46df6c6e5fad297fe7fbca4963dcf180cb1d0528cabc884d1f603311fed01328",
+        "generation_config.json": "3a6dc8c202be258023f58a03f804bdcacf138b8a2cc7492be2530e16945a0951",
+        "chat_template.json": "854445c0a45532ecbee1ae9aa31d4be19644060a156f2c88456f50f584261543",
+        "added_tokens.json": "a94c56096001713e3eb9a34b1a545a8c1d5e8034ed2fb81f897c8cb54b420121",
+        "model.safetensors.index.json": "73af906b5ac12aea6eddf104d482d2a50bca30b20d61ee9f6c5269d3427a6991",
+        "special_tokens_map.json": "358c249e2fb29060c6b73157d428853b0c48710deffc8ee670ab1013880946c9",
+        "tokenizer_config.json": "79b7f1ebceddf7235f3791c387d781818b0c7e7cf868d0e4f71896a55b949833",
+        "tokenizer.json": "30e1294abd835edfebb24618fce6f47c21ffb2b2802520d150bdee0b808b47cb",
+        "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      }
+    },
+    "float32": {
+      "hardware": "NVIDIA A800-SXM4-80GB, 81920 MiB",
+      "units": 9,
+      "cpu_tests": 8,
+      "datasets": [
+        "POPE/0",
+        "HRBench4K/0",
+        "MMMU_val/3414"
+      ],
+      "modes": [
+        "dense",
+        "fixed_candidate",
+        "restored_dense"
+      ],
+      "wall_seconds": 158.8838466949528,
+      "peak_allocated_GiB": 33.531,
+      "independent_server_audit": {
+        "state": "passed",
+        "units": 9,
+        "crc_journal_export_eos_dense_and_timer_order": true,
+        "candidate_historical_identity_required": false,
+        "image_validation": "skipped by user request"
+      },
+      "independent_download_audit": "passed",
+      "dtome_layers": 24,
+      "mmmu_per_image_nonincreasing": true,
+      "first_counts": [
+        396,
+        380,
+        366,
+        380,
+        388
+      ],
+      "last_counts": [
+        33,
+        42,
+        41,
+        36,
+        31
+      ],
+      "gpu_worker_exit_code": 0,
+      "requests": [
+        {
+          "dataset": "HRBench4K",
+          "request_id": "0",
+          "mode": "dense",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 36.757274996489286,
+          "e2e_ms": 951.1634720256552,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 31197764096,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "HRBench4K",
+          "request_id": "0",
+          "mode": "fixed_candidate",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 35.03896901383996,
+          "e2e_ms": 945.6484719412401,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 31197765120,
+          "method_active": true,
+          "trace": [
+            {
+              "layer_zero_based": 0,
+              "input_tokens_per_image": [
+                577
+              ],
+              "output_tokens_per_image": [
+                544
+              ],
+              "padded_output_tokens": 544
+            },
+            {
+              "layer_zero_based": 1,
+              "input_tokens_per_image": [
+                544
+              ],
+              "output_tokens_per_image": [
+                474
+              ],
+              "padded_output_tokens": 474
+            },
+            {
+              "layer_zero_based": 2,
+              "input_tokens_per_image": [
+                474
+              ],
+              "output_tokens_per_image": [
+                404
+              ],
+              "padded_output_tokens": 404
+            },
+            {
+              "layer_zero_based": 3,
+              "input_tokens_per_image": [
+                404
+              ],
+              "output_tokens_per_image": [
+                383
+              ],
+              "padded_output_tokens": 383
+            },
+            {
+              "layer_zero_based": 4,
+              "input_tokens_per_image": [
+                383
+              ],
+              "output_tokens_per_image": [
+                344
+              ],
+              "padded_output_tokens": 344
+            },
+            {
+              "layer_zero_based": 5,
+              "input_tokens_per_image": [
+                344
+              ],
+              "output_tokens_per_image": [
+                324
+              ],
+              "padded_output_tokens": 324
+            },
+            {
+              "layer_zero_based": 6,
+              "input_tokens_per_image": [
+                324
+              ],
+              "output_tokens_per_image": [
+                323
+              ],
+              "padded_output_tokens": 323
+            },
+            {
+              "layer_zero_based": 7,
+              "input_tokens_per_image": [
+                323
+              ],
+              "output_tokens_per_image": [
+                314
+              ],
+              "padded_output_tokens": 314
+            },
+            {
+              "layer_zero_based": 8,
+              "input_tokens_per_image": [
+                314
+              ],
+              "output_tokens_per_image": [
+                293
+              ],
+              "padded_output_tokens": 293
+            },
+            {
+              "layer_zero_based": 9,
+              "input_tokens_per_image": [
+                293
+              ],
+              "output_tokens_per_image": [
+                290
+              ],
+              "padded_output_tokens": 290
+            },
+            {
+              "layer_zero_based": 10,
+              "input_tokens_per_image": [
+                290
+              ],
+              "output_tokens_per_image": [
+                280
+              ],
+              "padded_output_tokens": 280
+            },
+            {
+              "layer_zero_based": 11,
+              "input_tokens_per_image": [
+                280
+              ],
+              "output_tokens_per_image": [
+                267
+              ],
+              "padded_output_tokens": 267
+            },
+            {
+              "layer_zero_based": 12,
+              "input_tokens_per_image": [
+                267
+              ],
+              "output_tokens_per_image": [
+                256
+              ],
+              "padded_output_tokens": 256
+            },
+            {
+              "layer_zero_based": 13,
+              "input_tokens_per_image": [
+                256
+              ],
+              "output_tokens_per_image": [
+                239
+              ],
+              "padded_output_tokens": 239
+            },
+            {
+              "layer_zero_based": 14,
+              "input_tokens_per_image": [
+                239
+              ],
+              "output_tokens_per_image": [
+                232
+              ],
+              "padded_output_tokens": 232
+            },
+            {
+              "layer_zero_based": 15,
+              "input_tokens_per_image": [
+                232
+              ],
+              "output_tokens_per_image": [
+                217
+              ],
+              "padded_output_tokens": 217
+            },
+            {
+              "layer_zero_based": 16,
+              "input_tokens_per_image": [
+                217
+              ],
+              "output_tokens_per_image": [
+                209
+              ],
+              "padded_output_tokens": 209
+            },
+            {
+              "layer_zero_based": 17,
+              "input_tokens_per_image": [
+                209
+              ],
+              "output_tokens_per_image": [
+                199
+              ],
+              "padded_output_tokens": 199
+            },
+            {
+              "layer_zero_based": 18,
+              "input_tokens_per_image": [
+                199
+              ],
+              "output_tokens_per_image": [
+                191
+              ],
+              "padded_output_tokens": 191
+            },
+            {
+              "layer_zero_based": 19,
+              "input_tokens_per_image": [
+                191
+              ],
+              "output_tokens_per_image": [
+                174
+              ],
+              "padded_output_tokens": 174
+            },
+            {
+              "layer_zero_based": 20,
+              "input_tokens_per_image": [
+                174
+              ],
+              "output_tokens_per_image": [
+                170
+              ],
+              "padded_output_tokens": 170
+            },
+            {
+              "layer_zero_based": 21,
+              "input_tokens_per_image": [
+                170
+              ],
+              "output_tokens_per_image": [
+                165
+              ],
+              "padded_output_tokens": 165
+            },
+            {
+              "layer_zero_based": 22,
+              "input_tokens_per_image": [
+                165
+              ],
+              "output_tokens_per_image": [
+                101
+              ],
+              "padded_output_tokens": 101
+            },
+            {
+              "layer_zero_based": 23,
+              "input_tokens_per_image": [
+                101
+              ],
+              "output_tokens_per_image": [
+                73
+              ],
+              "padded_output_tokens": 73
+            }
+          ]
+        },
+        {
+          "dataset": "HRBench4K",
+          "request_id": "0",
+          "mode": "restored_dense",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 36.757162073627114,
+          "e2e_ms": 947.3418069537729,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 31197765120,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "MMMU_val",
+          "request_id": "3414",
+          "mode": "dense",
+          "image_count": 5,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 151.98483096901327,
+          "e2e_ms": 3063.4426419856027,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 36003090432,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "MMMU_val",
+          "request_id": "3414",
+          "mode": "fixed_candidate",
+          "image_count": 5,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 89.9128980236128,
+          "e2e_ms": 3007.856623036787,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 36003150848,
+          "method_active": true,
+          "trace": [
+            {
+              "layer_zero_based": 0,
+              "input_tokens_per_image": [
+                577,
+                577,
+                577,
+                577,
+                577
+              ],
+              "output_tokens_per_image": [
+                396,
+                380,
+                366,
+                380,
+                388
+              ],
+              "padded_output_tokens": 396
+            },
+            {
+              "layer_zero_based": 1,
+              "input_tokens_per_image": [
+                396,
+                380,
+                366,
+                380,
+                388
+              ],
+              "output_tokens_per_image": [
+                284,
+                266,
+                250,
+                254,
+                288
+              ],
+              "padded_output_tokens": 288
+            },
+            {
+              "layer_zero_based": 2,
+              "input_tokens_per_image": [
+                284,
+                266,
+                250,
+                254,
+                288
+              ],
+              "output_tokens_per_image": [
+                231,
+                216,
+                200,
+                204,
+                229
+              ],
+              "padded_output_tokens": 231
+            },
+            {
+              "layer_zero_based": 3,
+              "input_tokens_per_image": [
+                231,
+                216,
+                200,
+                204,
+                229
+              ],
+              "output_tokens_per_image": [
+                220,
+                203,
+                191,
+                193,
+                215
+              ],
+              "padded_output_tokens": 220
+            },
+            {
+              "layer_zero_based": 4,
+              "input_tokens_per_image": [
+                220,
+                203,
+                191,
+                193,
+                215
+              ],
+              "output_tokens_per_image": [
+                211,
+                192,
+                181,
+                182,
+                201
+              ],
+              "padded_output_tokens": 211
+            },
+            {
+              "layer_zero_based": 5,
+              "input_tokens_per_image": [
+                211,
+                192,
+                181,
+                182,
+                201
+              ],
+              "output_tokens_per_image": [
+                199,
+                188,
+                175,
+                172,
+                190
+              ],
+              "padded_output_tokens": 199
+            },
+            {
+              "layer_zero_based": 6,
+              "input_tokens_per_image": [
+                199,
+                188,
+                175,
+                172,
+                190
+              ],
+              "output_tokens_per_image": [
+                198,
+                187,
+                172,
+                170,
+                187
+              ],
+              "padded_output_tokens": 198
+            },
+            {
+              "layer_zero_based": 7,
+              "input_tokens_per_image": [
+                198,
+                187,
+                172,
+                170,
+                187
+              ],
+              "output_tokens_per_image": [
+                189,
+                184,
+                167,
+                169,
+                181
+              ],
+              "padded_output_tokens": 189
+            },
+            {
+              "layer_zero_based": 8,
+              "input_tokens_per_image": [
+                189,
+                184,
+                167,
+                169,
+                181
+              ],
+              "output_tokens_per_image": [
+                182,
+                177,
+                161,
+                162,
+                176
+              ],
+              "padded_output_tokens": 182
+            },
+            {
+              "layer_zero_based": 9,
+              "input_tokens_per_image": [
+                182,
+                177,
+                161,
+                162,
+                176
+              ],
+              "output_tokens_per_image": [
+                177,
+                175,
+                161,
+                162,
+                170
+              ],
+              "padded_output_tokens": 177
+            },
+            {
+              "layer_zero_based": 10,
+              "input_tokens_per_image": [
+                177,
+                175,
+                161,
+                162,
+                170
+              ],
+              "output_tokens_per_image": [
+                172,
+                168,
+                150,
+                154,
+                164
+              ],
+              "padded_output_tokens": 172
+            },
+            {
+              "layer_zero_based": 11,
+              "input_tokens_per_image": [
+                172,
+                168,
+                150,
+                154,
+                164
+              ],
+              "output_tokens_per_image": [
+                161,
+                157,
+                142,
+                144,
+                157
+              ],
+              "padded_output_tokens": 161
+            },
+            {
+              "layer_zero_based": 12,
+              "input_tokens_per_image": [
+                161,
+                157,
+                142,
+                144,
+                157
+              ],
+              "output_tokens_per_image": [
+                155,
+                151,
+                140,
+                141,
+                146
+              ],
+              "padded_output_tokens": 155
+            },
+            {
+              "layer_zero_based": 13,
+              "input_tokens_per_image": [
+                155,
+                151,
+                140,
+                141,
+                146
+              ],
+              "output_tokens_per_image": [
+                133,
+                140,
+                129,
+                130,
+                135
+              ],
+              "padded_output_tokens": 140
+            },
+            {
+              "layer_zero_based": 14,
+              "input_tokens_per_image": [
+                133,
+                140,
+                129,
+                130,
+                135
+              ],
+              "output_tokens_per_image": [
+                123,
+                134,
+                123,
+                123,
+                128
+              ],
+              "padded_output_tokens": 134
+            },
+            {
+              "layer_zero_based": 15,
+              "input_tokens_per_image": [
+                123,
+                134,
+                123,
+                123,
+                128
+              ],
+              "output_tokens_per_image": [
+                111,
+                123,
+                111,
+                115,
+                111
+              ],
+              "padded_output_tokens": 123
+            },
+            {
+              "layer_zero_based": 16,
+              "input_tokens_per_image": [
+                111,
+                123,
+                111,
+                115,
+                111
+              ],
+              "output_tokens_per_image": [
+                93,
+                110,
+                99,
+                98,
+                87
+              ],
+              "padded_output_tokens": 110
+            },
+            {
+              "layer_zero_based": 17,
+              "input_tokens_per_image": [
+                93,
+                110,
+                99,
+                98,
+                87
+              ],
+              "output_tokens_per_image": [
+                81,
+                94,
+                86,
+                89,
+                79
+              ],
+              "padded_output_tokens": 94
+            },
+            {
+              "layer_zero_based": 18,
+              "input_tokens_per_image": [
+                81,
+                94,
+                86,
+                89,
+                79
+              ],
+              "output_tokens_per_image": [
+                73,
+                81,
+                81,
+                83,
+                73
+              ],
+              "padded_output_tokens": 83
+            },
+            {
+              "layer_zero_based": 19,
+              "input_tokens_per_image": [
+                73,
+                81,
+                81,
+                83,
+                73
+              ],
+              "output_tokens_per_image": [
+                63,
+                74,
+                73,
+                70,
+                62
+              ],
+              "padded_output_tokens": 74
+            },
+            {
+              "layer_zero_based": 20,
+              "input_tokens_per_image": [
+                63,
+                74,
+                73,
+                70,
+                62
+              ],
+              "output_tokens_per_image": [
+                54,
+                71,
+                67,
+                59,
+                57
+              ],
+              "padded_output_tokens": 71
+            },
+            {
+              "layer_zero_based": 21,
+              "input_tokens_per_image": [
+                54,
+                71,
+                67,
+                59,
+                57
+              ],
+              "output_tokens_per_image": [
+                50,
+                66,
+                63,
+                57,
+                50
+              ],
+              "padded_output_tokens": 66
+            },
+            {
+              "layer_zero_based": 22,
+              "input_tokens_per_image": [
+                50,
+                66,
+                63,
+                57,
+                50
+              ],
+              "output_tokens_per_image": [
+                37,
+                43,
+                43,
+                41,
+                35
+              ],
+              "padded_output_tokens": 43
+            },
+            {
+              "layer_zero_based": 23,
+              "input_tokens_per_image": [
+                37,
+                43,
+                43,
+                41,
+                35
+              ],
+              "output_tokens_per_image": [
+                33,
+                42,
+                41,
+                36,
+                31
+              ],
+              "padded_output_tokens": 42
+            }
+          ]
+        },
+        {
+          "dataset": "MMMU_val",
+          "request_id": "3414",
+          "mode": "restored_dense",
+          "image_count": 5,
+          "token_count": 2,
+          "complete_tokens_sha256": "c00758ab833c009adab9f126df41a30c2c53212a186c437a10126b4b8f8564ea",
+          "output_text_sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 189.31007501669228,
+          "e2e_ms": 3104.3769309762865,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 36003150848,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "POPE",
+          "request_id": "0",
+          "mode": "dense",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "97212ae0d72383be73e7b998820729eb270a2f08df069f4f62af8e7ccf4c5fc8",
+          "output_text_sha256": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 36.888560047373176,
+          "e2e_ms": 653.9274780079722,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 31135341056,
+          "method_active": false,
+          "trace": []
+        },
+        {
+          "dataset": "POPE",
+          "request_id": "0",
+          "mode": "fixed_candidate",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "97212ae0d72383be73e7b998820729eb270a2f08df069f4f62af8e7ccf4c5fc8",
+          "output_text_sha256": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 34.17122596874833,
+          "e2e_ms": 617.522896034643,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 31135371776,
+          "method_active": true,
+          "trace": [
+            {
+              "layer_zero_based": 0,
+              "input_tokens_per_image": [
+                577
+              ],
+              "output_tokens_per_image": [
+                518
+              ],
+              "padded_output_tokens": 518
+            },
+            {
+              "layer_zero_based": 1,
+              "input_tokens_per_image": [
+                518
+              ],
+              "output_tokens_per_image": [
+                462
+              ],
+              "padded_output_tokens": 462
+            },
+            {
+              "layer_zero_based": 2,
+              "input_tokens_per_image": [
+                462
+              ],
+              "output_tokens_per_image": [
+                421
+              ],
+              "padded_output_tokens": 421
+            },
+            {
+              "layer_zero_based": 3,
+              "input_tokens_per_image": [
+                421
+              ],
+              "output_tokens_per_image": [
+                366
+              ],
+              "padded_output_tokens": 366
+            },
+            {
+              "layer_zero_based": 4,
+              "input_tokens_per_image": [
+                366
+              ],
+              "output_tokens_per_image": [
+                335
+              ],
+              "padded_output_tokens": 335
+            },
+            {
+              "layer_zero_based": 5,
+              "input_tokens_per_image": [
+                335
+              ],
+              "output_tokens_per_image": [
+                311
+              ],
+              "padded_output_tokens": 311
+            },
+            {
+              "layer_zero_based": 6,
+              "input_tokens_per_image": [
+                311
+              ],
+              "output_tokens_per_image": [
+                306
+              ],
+              "padded_output_tokens": 306
+            },
+            {
+              "layer_zero_based": 7,
+              "input_tokens_per_image": [
+                306
+              ],
+              "output_tokens_per_image": [
+                289
+              ],
+              "padded_output_tokens": 289
+            },
+            {
+              "layer_zero_based": 8,
+              "input_tokens_per_image": [
+                289
+              ],
+              "output_tokens_per_image": [
+                263
+              ],
+              "padded_output_tokens": 263
+            },
+            {
+              "layer_zero_based": 9,
+              "input_tokens_per_image": [
+                263
+              ],
+              "output_tokens_per_image": [
+                260
+              ],
+              "padded_output_tokens": 260
+            },
+            {
+              "layer_zero_based": 10,
+              "input_tokens_per_image": [
+                260
+              ],
+              "output_tokens_per_image": [
+                246
+              ],
+              "padded_output_tokens": 246
+            },
+            {
+              "layer_zero_based": 11,
+              "input_tokens_per_image": [
+                246
+              ],
+              "output_tokens_per_image": [
+                230
+              ],
+              "padded_output_tokens": 230
+            },
+            {
+              "layer_zero_based": 12,
+              "input_tokens_per_image": [
+                230
+              ],
+              "output_tokens_per_image": [
+                226
+              ],
+              "padded_output_tokens": 226
+            },
+            {
+              "layer_zero_based": 13,
+              "input_tokens_per_image": [
+                226
+              ],
+              "output_tokens_per_image": [
+                206
+              ],
+              "padded_output_tokens": 206
+            },
+            {
+              "layer_zero_based": 14,
+              "input_tokens_per_image": [
+                206
+              ],
+              "output_tokens_per_image": [
+                202
+              ],
+              "padded_output_tokens": 202
+            },
+            {
+              "layer_zero_based": 15,
+              "input_tokens_per_image": [
+                202
+              ],
+              "output_tokens_per_image": [
+                193
+              ],
+              "padded_output_tokens": 193
+            },
+            {
+              "layer_zero_based": 16,
+              "input_tokens_per_image": [
+                193
+              ],
+              "output_tokens_per_image": [
+                183
+              ],
+              "padded_output_tokens": 183
+            },
+            {
+              "layer_zero_based": 17,
+              "input_tokens_per_image": [
+                183
+              ],
+              "output_tokens_per_image": [
+                182
+              ],
+              "padded_output_tokens": 182
+            },
+            {
+              "layer_zero_based": 18,
+              "input_tokens_per_image": [
+                182
+              ],
+              "output_tokens_per_image": [
+                176
+              ],
+              "padded_output_tokens": 176
+            },
+            {
+              "layer_zero_based": 19,
+              "input_tokens_per_image": [
+                176
+              ],
+              "output_tokens_per_image": [
+                168
+              ],
+              "padded_output_tokens": 168
+            },
+            {
+              "layer_zero_based": 20,
+              "input_tokens_per_image": [
+                168
+              ],
+              "output_tokens_per_image": [
+                159
+              ],
+              "padded_output_tokens": 159
+            },
+            {
+              "layer_zero_based": 21,
+              "input_tokens_per_image": [
+                159
+              ],
+              "output_tokens_per_image": [
+                155
+              ],
+              "padded_output_tokens": 155
+            },
+            {
+              "layer_zero_based": 22,
+              "input_tokens_per_image": [
+                155
+              ],
+              "output_tokens_per_image": [
+                97
+              ],
+              "padded_output_tokens": 97
+            },
+            {
+              "layer_zero_based": 23,
+              "input_tokens_per_image": [
+                97
+              ],
+              "output_tokens_per_image": [
+                79
+              ],
+              "padded_output_tokens": 79
+            }
+          ]
+        },
+        {
+          "dataset": "POPE",
+          "request_id": "0",
+          "mode": "restored_dense",
+          "image_count": 1,
+          "token_count": 2,
+          "complete_tokens_sha256": "97212ae0d72383be73e7b998820729eb270a2f08df069f4f62af8e7ccf4c5fc8",
+          "output_text_sha256": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+          "natural_eos": true,
+          "hit_generation_cap": false,
+          "pure_vit_ms": 36.69616801198572,
+          "e2e_ms": 618.8940230058506,
+          "events": [
+            "hooks_installed",
+            "e2e_start",
+            "vision_start",
+            "vision_stop",
+            "e2e_stop",
+            "hooks_removed"
+          ],
+          "peak_allocated_bytes": 31135371776,
+          "method_active": false,
+          "trace": []
+        }
+      ],
+      "native_runtime_source": {
+        "author_dymu_bridge.py": "b5272439e0b2ad325681a6cbca2b25098ff5a17f72ee4753d2c3cc236fee2d6d",
+        "author_dymu_core.py": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
+        "diagnostic_guard.py": "2d6253e909102a579d54361145b54d0b2d5fa20aec5b2ba9cfcc6d8962ac6391",
+        "launch.py": "dc7cede577d91e11ded0cdca0150f40d9405f5099ec2f0b21326333d67090895",
+        "request_meter.py": "ee1aa4d7ac23c339967b037f5d7e8fc2946b15813376188bad9ef19dc8f13f64",
+        "test_deferred_native.py": "5ec7dcb562f74d6d782713d9ccad646ce77ed02124134c5a321b21d61e9c246f",
+        "worker.py": "4c8f96aaef36574fd372d19b7a13a7afdb5ae30bf0dfc01c0deedfa4141701c3",
+        "BASE_SOURCES_SHA256.json": "9d5e3e63539db4ae99f901554cbf65cee2a99b3ffcba5914f0e6bfa5cfed8bed"
+      },
+      "frozen_base_sources": {
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/.ipynb_checkpoints/checkpoint_journal-checkpoint.py": "800b39ac2b301425bce8d7386a12d433c7f718a318e524dcff2c53f74e80f7c4",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/.ipynb_checkpoints/grid-checkpoint.py": "5e5c994a532755d288060686dfaf1e9aead1a6e15f51370c1265596cd89a4174",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/.ipynb_checkpoints/launch_contract-checkpoint.py": "f8e1039496c845b7debdf281170f8c403dc7fcdd8f102144c9b46eeb71044929",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/.ipynb_checkpoints/launch_plan-checkpoint.py": "23609aab7a986b59e1287012aedd6bf1357d639d6cbe63a3a5dc1c4293d40032",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/.ipynb_checkpoints/llava_runtime-checkpoint.py": "40f1e15d91ca7eb4780a06341675c55f0df87fb031b095c21bf7fef545d8967b",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/.ipynb_checkpoints/prompting-checkpoint.py": "b2e86a7a7be61726ac48c7397dff7dcfaabe68a46fa94ce5d2c03f678c016a37",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/.ipynb_checkpoints/run_job-checkpoint.py": "1cee29233a3d07a78221461d3c645c38c826c0c037154e9de41d9192df4fbbd7",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/audit.py": "887b505dcecb380cbc45c1276a674e48251498a139795f20f27908cd77c3bf91",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/audit_manifests.py": "9664c8a6960fbfdad8b56b11ca93ad6b2aca50ec9f1eb892e0f03d555b62ebbd",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/audit_smoke.py": "fc0a4d62a80e4d446e0e9592b1897915c3a6bcee37ae1ca62cdffc9010c1f0e2",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/build_bundle.py": "3256f1bf3ca99435c58f83a5459f94adbb974c979bb3988d0084ffcb7f2dee1d",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/campaign_preflight.py": "c12e6150a5c3d77cf6ab04a92a5e5d58b4540eb95622b0360778638da7c4a28f",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/check_environment.py": "e323963004161e1cdca6af1eb1a2e98740886c91226f88e103b34d5aa05a6951",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/checkpoint_journal.py": "800b39ac2b301425bce8d7386a12d433c7f718a318e524dcff2c53f74e80f7c4",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/dataset_registry.py": "e373b59d4ca54509c9dc638376db38067365c69f13151a72e659f8652bf65b63",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/fidelity_policy.py": "2127cef38e09024e92eb40820093b760b60ba5c61bde6ba3d80c47aad64c6be5",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/.ipynb_checkpoints/pitome_author_fp16-checkpoint.py": "b058fcae583b4eea2d10d477ed780aa87e08efbf34a36d2e72d34b65263d0a66",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/author_dymu_bridge.py": "b30538f7c8df30cf2c36c746c17f49c645a39b858a74d1abc4a4a47094fa06df",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/author_dymu_core.py": "ffc9bac8e60b1553869b41c1733ffc77ba3d474df803425bfeda1e27da01be39",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/clip_peer_ports.py": "f013f96f35bba154713d4821669e828557a66a7a2e9d37f83e9aabc5540abd56",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ipcv_clip_batch.py": "86c073c4f7d31255046057df09b29b535e87846423f03bcba0adb44d9229473e",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/llava_vision_loader.py": "5707df02ba2b1bbdbb8d4c8698fd510acbb4427190c4656694082b418e451bf0",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_fp32_port/pack_restore_triton.py": "944820ebd0fe4a4a2062c739ee7c46ddd7665ed68b77860f9ff869e8ae881e5f",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_fp32_port/relation_triton.py": "2027631872f769513b8db863484c411a6b8e8dc88fc2207c90cd8850f1db036d",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/adapter_h253_reference.py": "4f29e5ce75c2a6bf97a482525cb418f9a708add6fb8f1fa317b5624599ca0df7",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/adapter_pack_restore_eager.py": "318c5270cddbdeacf65c274f6ee485febc37510201612377a8b1ef1facb8b0b0",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/adapter_pack_restore_triton.py": "63122dd48c5f2057890b1ad3864d1b6cb15a9ec1bfce4e35972c2721d599c85c",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/adapter_q_fused_eager.py": "dc41f4a2b4c92c776471458819e03830a0e7e596fd851c0b67e6074d09e4efec",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/adapter_triton_eager.py": "bee2b6e4c91ae8a15853938036f403b1058725bbd182f1243c96c2dbba3356fa",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/adapter_triton_relation.py": "9e4f801031176d3218e23ae05f49c3c77f1c08d4ad43f7aff087144398cab120",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/attention_restore_triton.py": "99007ca0ac5e919ea84735411a179451c3cd36c05b708b60c84dcdbf89a0026c",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/layout.py": "dc1a630dd03c2cbbf1832233e9d7a4a3ecf8ea19996d932ccf3573972d26de66",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/pack_restore_triton.py": "e17e2d55463c505d678180d66dee726382d6d14da5330231157ab89687ab5903",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/ours_h297/relation_triton.py": "26801a0178d3a806a886a325a62f5314cf6061cb80634d42bb7a00a32045121a",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/peer_port_core.py": "797d2c1ab6306ef59471a80f800f6e7e56769adf6ee5d82511be94aff09045bf",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/pitome_author_fp16.py": "b058fcae583b4eea2d10d477ed780aa87e08efbf34a36d2e72d34b65263d0a66",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/frozen_sources/run_port_job.py": "8dd82b1824e3de1da24b888b975a7768b2854455a09454189019b693207acb6e",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/grid.py": "5e5c994a532755d288060686dfaf1e9aead1a6e15f51370c1265596cd89a4174",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/launch_contract.py": "f8e1039496c845b7debdf281170f8c403dc7fcdd8f102144c9b46eeb71044929",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/launch_plan.py": "23609aab7a986b59e1287012aedd6bf1357d639d6cbe63a3a5dc1c4293d40032",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/llava_runtime.py": "40f1e15d91ca7eb4780a06341675c55f0df87fb031b095c21bf7fef545d8967b",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/prepare_manifests.py": "511ba0e7eed46c53811e626085e80d98f35ae2e1aae60f3c9d731a277e2f3596",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/prepare_timing.py": "888492955f3afc01591cc027b2366923810430966b9c9ac017a5e17de2c00455",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/prompting.py": "b2e86a7a7be61726ac48c7397dff7dcfaabe68a46fa94ce5d2c03f678c016a37",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/release_integrity.py": "4e8ffd52d0f4eb42e42a1d27e2ec28c7ae4461b8defb443c4ceda323f4f58073",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/run_job.py": "1cee29233a3d07a78221461d3c645c38c826c0c037154e9de41d9192df4fbbd7",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/score_all.py": "d380207d35132c3bfef7e644115742795f1b9a7f5be86f87d5eda9f593ac61cf",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/score_predictions.py": "eb0f3c7edb2540c11b34e83ede958b8d916f6190d9aab75005001b6cbf796cf0",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/show_progress.py": "2abcd7eedf434cf751bf18ebe3c53240955ff9dea8c0304dde0c057d46580b2a",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/test_contract.py": "661c3b184d36476193ae9707bed3906a39ec30dab8f66091a07af18c55b0208c",
+        "route/hypotheses/v611_h303_llava15_five_method_fp32_a800/verify_bundle.py": "531904c7772fc3e5623110d46dbc52c601aa38ed9a98f28ca8a9233d21b278ca"
+      },
+      "external_execution_controller_sha256": "35b54280b83f245e191d8544d0fdad95d1d30b5f27dd45cc2de92c218ad6f276",
+      "private_evidence_archive": {
+        "name": "20261013T085740_llava_dtome_float32_evidence.zip",
+        "sha256": "bd905e3cf727131c0d1014a88ea11060d238f185a7ceb2a4e07cf801be11a377"
+      },
+      "timing_boundary": "Pure ViT and whole original request observed simultaneously in one complete generation; E2E includes observer hooks/synchronization; regression samples only",
+      "wall_seconds_is_performance_evidence": false,
+      "runtime_identity": {
+        "stack": {
+          "packages": {
+            "torch": "2.5.1+cu121",
+            "torchvision": "0.20.1+cu121",
+            "transformers": "4.57.6",
+            "tokenizers": "0.22.2",
+            "sentencepiece": "0.2.2",
+            "protobuf": "7.36.2",
+            "triton": "3.1.0",
+            "accelerate": "1.14.0",
+            "numpy": "2.4.6",
+            "pillow": "12.3.0",
+            "safetensors": "0.8.0",
+            "huggingface-hub": "0.36.2",
+            "setuptools": "84.0.0"
+          },
+          "environment_lock_sha256": "e52c6e56857f2ca986c8a3c3ca6c6c70043142236387a4ae640d4a6bdc803b2c",
+          "job": 2,
+          "method": "dtome",
+          "dtype": "float32",
+          "gpu": "NVIDIA A800-SXM4-80GB",
+          "gpu_memory_bytes": 85167243264,
+          "target_gpu": "A800",
+          "python": "3.11.16",
+          "torch": "2.5.1+cu121",
+          "cuda": "12.1",
+          "transformers": "4.57.6",
+          "attention": "eager",
+          "tf32": false,
+          "threads": 2,
+          "deterministic_algorithms": false
+        },
+        "model_id": "llava-hf/llava-1.5-7b-hf",
+        "model_revision": "b234b804b114d9e37bb655e11cbbb5f5e971b7a9",
+        "tokenizer_class": "LlamaTokenizerFast",
+        "tokenizer_use_fast": true,
+        "assistant_suffix_trailing_space": false,
+        "candidate_vision_attention": "author torch.nn.MultiheadAttention need_weights=False; existing PyTorch dispatch setting unchanged",
+        "primary_dense_vision_attention": "canonical HF CLIP eager (original r7 timing contract)",
+        "native_disabled_diagnostic_attention": "author MultiheadAttention r_total=0; existing dispatch setting unchanged; diagnostic only",
+        "native_mha_fastpath_enabled_at_load": true,
+        "canonical_dense_and_llm_attention": "HF eager"
+      },
+      "model_processor_tokenizer_asset_sha256": {
+        "config.json": "0bde54495c54bcc346064a0d314b010d1c4d3ca7f7e583b6f711949a35352c0f",
+        "preprocessor_config.json": "a8d5e64ee5c07ff6d70142856d178ac39d0563da3612e32110fa824f5337b7a1",
+        "processor_config.json": "fef918d6ba333f72a066877965bc4a162308568ba62aa90c806caedf7b45d64e",
+        "model-00003-of-00003.safetensors": "4f06177c37ca13944e73b57dd6d051767b950dffc12400c700dfa2509c24c697",
+        "model-00001-of-00003.safetensors": "c11dbf016ee7d35ee130c19b67e20eb04873996006f424b7bcbd453b6517ee66",
+        "model-00002-of-00003.safetensors": "46df6c6e5fad297fe7fbca4963dcf180cb1d0528cabc884d1f603311fed01328",
+        "generation_config.json": "3a6dc8c202be258023f58a03f804bdcacf138b8a2cc7492be2530e16945a0951",
+        "chat_template.json": "854445c0a45532ecbee1ae9aa31d4be19644060a156f2c88456f50f584261543",
+        "added_tokens.json": "a94c56096001713e3eb9a34b1a545a8c1d5e8034ed2fb81f897c8cb54b420121",
+        "model.safetensors.index.json": "73af906b5ac12aea6eddf104d482d2a50bca30b20d61ee9f6c5269d3427a6991",
+        "special_tokens_map.json": "358c249e2fb29060c6b73157d428853b0c48710deffc8ee670ab1013880946c9",
+        "tokenizer_config.json": "79b7f1ebceddf7235f3791c387d781818b0c7e7cf868d0e4f71896a55b949833",
+        "tokenizer.json": "30e1294abd835edfebb24618fce6f47c21ffb2b2802520d150bdee0b808b47cb",
+        "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      }
+    }
+  },
+  "warnings": "Worker shutdown temporary-file cleanup was blocked by the frozen no-delete guard (PermissionError); worker exit 0, inference and independent audit passed.",
+  "publication": {
+    "version": "20261013",
+    "status": "FINAL",
+    "source_templates": "revisions/native_20261012_r6/templates/llava",
+    "history": "ordinary successor commit; no rewritten history or separate final-release directory",
+    "updated_source_files": [
+      "llava/BUNDLE_SHA256.json",
+      "llava/author_dymu_core.py",
+      "llava/test_deferred_native.py"
+    ],
+    "applies_to_other_combinations": false
+  },
+  "public_reconstruction": {
+    "state": "passed",
+    "current_reconstructed_files": 102,
+    "exact_gpu_tested_combination_files": 10,
+    "original_runner_admission_dry_run": "passed",
+    "repeated_independent_audits": {
+      "float16": 9,
+      "float32": 9
+    },
+    "source_byte_identity": true,
+    "executable_method_source_changed": false,
+    "raw_questions_answers_logs_published": false,
+    "separate_final_release_directory": false
+  }
+}

@@ -1,5 +1,9 @@
 # r6：Smol iLLaVA 作者 FP16 舍入兼容
 
+**2026-10-13 当前增量：仅 LLaVA-1.5-7B × DToMe 更新并备注终稿（FP16/FP32）。** [组合说明](../../models/llava15-7b/dymu/README.md) · [独立验收](../../models/llava15-7b/dymu/VALIDATION_20261013.json)。现有 FILE_MAP 和 LLaVA 模板已更新，其他组合的代码与状态不变；旧提交保留。
+
+以下为 2026-10-12 r6 Smol 更新的历史记录，其“其他模型不变”描述适用于当时的提交。当前组合增量以上述链接及 FILE_MAP.component_updates 为准。
+
 Smol 的合并行现在先 `.half()`，再 `.to(x.dtype)`。前一步保留作者 FP16 舍入；后一步满足 `scatter_` 源/目标类型相同的要求，FP32 下不会取消已经发生的舍入。仅改合并行的类型转换与说明，选点、排序、权重、合并和恢复规则不变；没有把整个模型转成 FP16。
 
 相对 r5，仅修改 `smol/smol_merge_ports.py` 与其源清单，并增加一个舍入/写回回归测试。其他模型与方法文件保持 r5 字节，Qwen 作者 `.half()` 和 QK32 保护保留。

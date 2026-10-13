@@ -1,10 +1,10 @@
 {
     "author_dymu_bridge.py": "b5272439e0b2ad325681a6cbca2b25098ff5a17f72ee4753d2c3cc236fee2d6d",
-    "author_dymu_core.py": "ffc9bac8e60b1553869b41c1733ffc77ba3d474df803425bfeda1e27da01be39",
+    "author_dymu_core.py": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
     "diagnostic_guard.py": "2d6253e909102a579d54361145b54d0b2d5fa20aec5b2ba9cfcc6d8962ac6391",
     "launch.py": "dc7cede577d91e11ded0cdca0150f40d9405f5099ec2f0b21326333d67090895",
     "request_meter.py": "ee1aa4d7ac23c339967b037f5d7e8fc2946b15813376188bad9ef19dc8f13f64",
-    "test_deferred_native.py": "1479297828190e61ad6ec3610d7d10d772a22ea99660e9ca0c3248ffd7a3d113",
+    "test_deferred_native.py": "5ec7dcb562f74d6d782713d9ccad646ce77ed02124134c5a321b21d61e9c246f",
     "worker.py": "4c8f96aaef36574fd372d19b7a13a7afdb5ae30bf0dfc01c0deedfa4141701c3",
     "BASE_SOURCES_SHA256.json": "9d5e3e63539db4ae99f901554cbf65cee2a99b3ffcba5914f0e6bfa5cfed8bed"
 }

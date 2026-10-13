@@ -32,9 +32,9 @@
     },
     {
       "path": "llava/BUNDLE_SHA256.json",
-      "tested_sha256": "b50599dc42ce9933d9db2f674d7b04c6cd8257c9c3444bd8a3f32624574b30e6",
+      "tested_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
       "disposition": "template",
-      "template_sha256": "b50599dc42ce9933d9db2f674d7b04c6cd8257c9c3444bd8a3f32624574b30e6",
+      "template_sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
       "project_root_substitution": false
     },
     {
@@ -46,9 +46,9 @@
     },
     {
       "path": "llava/author_dymu_core.py",
-      "tested_sha256": "ffc9bac8e60b1553869b41c1733ffc77ba3d474df803425bfeda1e27da01be39",
+      "tested_sha256": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
       "disposition": "template",
-      "template_sha256": "ffc9bac8e60b1553869b41c1733ffc77ba3d474df803425bfeda1e27da01be39",
+      "template_sha256": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
       "project_root_substitution": false
     },
     {
@@ -74,9 +74,9 @@
     },
     {
       "path": "llava/test_deferred_native.py",
-      "tested_sha256": "1479297828190e61ad6ec3610d7d10d772a22ea99660e9ca0c3248ffd7a3d113",
+      "tested_sha256": "5ec7dcb562f74d6d782713d9ccad646ce77ed02124134c5a321b21d61e9c246f",
       "disposition": "template",
-      "template_sha256": "1479297828190e61ad6ec3610d7d10d772a22ea99660e9ca0c3248ffd7a3d113",
+      "template_sha256": "5ec7dcb562f74d6d782713d9ccad646ce77ed02124134c5a321b21d61e9c246f",
       "project_root_substitution": false
     },
     {
@@ -706,5 +706,23 @@
     }
   ],
   "scope": "102 sealed files, 96 public templates, six local author dependencies",
-  "release_archive_sha256": "2a7db20e1f0fbc10438e80c0a6ca31d38e8788e4ea710039b51d32906ea277c1"
+  "release_archive_sha256": "2a7db20e1f0fbc10438e80c0a6ca31d38e8788e4ea710039b51d32906ea277c1",
+  "component_updates": {
+    "llava_dtome": {
+      "version": "20261013",
+      "status": "FINAL",
+      "precisions": [
+        "float16",
+        "float32"
+      ],
+      "source_package_sha256": "5eeea6e7810b55c376905c13b20d65d2b444a11ead4a118a29a0f2adfa9e5028",
+      "changed_source_files": [
+        "llava/BUNDLE_SHA256.json",
+        "llava/author_dymu_core.py",
+        "llava/test_deferred_native.py"
+      ],
+      "validation": "../../models/llava15-7b/dymu/VALIDATION_20261013.json",
+      "other_combinations_finalized": false
+    }
+  }
 }

@@ -316,7 +316,7 @@ def batch_level_bipartite_soft_matching(
         dst_b = src_b
         dst_seq_len = dst.size(1)
         dst_flat_indices = dst_b * dst_seq_len + dst_idx
-        dst_flat = dst.reshape(-1, dst.size(-1))
+        dst_flat = dst.reshape(-1, dst.size(-1)).clone()
         index_expanded = dst_flat_indices.unsqueeze(-1).expand(-1, dst_flat.size(-1))
         
         # 

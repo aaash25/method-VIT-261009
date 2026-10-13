@@ -1,7 +1,7 @@
 {
   "algorithm": "sha256",
-  "base_commit": "19410ee2748f0d145b9578c3e75b339cd8aac055",
-  "scope": "Exact staged Git bytes; r6 Smol FP16 rounding compatibility; historical directories unchanged",
+  "base_commit": "467ac04d200c08579f4cc954b60878d1648d522e",
+  "scope": "Exact current Git bytes; LLaVA DToMe updated to 20261013 final version; other combinations unchanged",
   "excluded_self": "sources/PUBLIC_REPOSITORY_MANIFEST_20261012_r6.json",
   "files": [
     {
@@ -16,8 +16,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "47b4b373ea8634d0aebf311a455bd15b5b6238c19c8608a203dabdbd762ecc7a",
-      "bytes": 4200
+      "sha256": "e7c32e169e6636801b2c3c5d7f5fa3001b8378097f3db394f5621d2aed199d99",
+      "bytes": 4601
     },
     {
       "path": "SOURCE_CANDIDATE_README.md",
@@ -386,8 +386,13 @@
     },
     {
       "path": "models/llava15-7b/dymu/README.md",
-      "sha256": "f3802e5886bca880f2424e41bf07557022d93ca2d2722fa94a28650a83bb4d71",
-      "bytes": 2006
+      "sha256": "6001772a3537e25750126e6377013941b393728930d5a876b80c539ea9a67768",
+      "bytes": 3579
+    },
+    {
+      "path": "models/llava15-7b/dymu/VALIDATION_20261013.json",
+      "sha256": "6ae05a197109ddd06a54bea1e34ee45ed5af2a63235107e7a893934c79da8d7a",
+      "bytes": 91803
     },
     {
       "path": "models/llava15-7b/illava/README.md",
@@ -1966,13 +1971,13 @@
     },
     {
       "path": "revisions/native_20261012_r6/FILE_MAP.json",
-      "sha256": "94f465da1d670b5c318c136ad300a8a8fff5d3cfa03cb2f1e459d3308ae3ce4d",
-      "bytes": 31904
+      "sha256": "01870aaff687f8c81c6d9644f1a145fd1a40c8cb5f9d7ba4d2f269e7939200cf",
+      "bytes": 32458
     },
     {
       "path": "revisions/native_20261012_r6/README.md",
-      "sha256": "624314f29d7f06d419328a3c330713d3cf989bf585b341983cb70c9f6ec2a5ca",
-      "bytes": 1949
+      "sha256": "9c114a389218504a1a32368604a2adbb6064bf622a38a7b4b500a0ebe142be1d",
+      "bytes": 2466
     },
     {
       "path": "revisions/native_20261012_r6/SOURCE_RECEIPT.json",
@@ -2011,7 +2016,7 @@
     },
     {
       "path": "revisions/native_20261012_r6/templates/llava/BUNDLE_SHA256.json",
-      "sha256": "b50599dc42ce9933d9db2f674d7b04c6cd8257c9c3444bd8a3f32624574b30e6",
+      "sha256": "446591efbcaa00de375f911a5ea4f9bffc5c9fc0cd8c88009c072ae273701c3f",
       "bytes": 761
     },
     {
@@ -2021,8 +2026,8 @@
     },
     {
       "path": "revisions/native_20261012_r6/templates/llava/author_dymu_core.py",
-      "sha256": "ffc9bac8e60b1553869b41c1733ffc77ba3d474df803425bfeda1e27da01be39",
-      "bytes": 35615
+      "sha256": "27de852eca4d5c1a58af77308610ee5428c69c0cd2fe54503a3851406297f8f7",
+      "bytes": 35623
     },
     {
       "path": "revisions/native_20261012_r6/templates/llava/diagnostic_guard.py",
@@ -2041,8 +2046,8 @@
     },
     {
       "path": "revisions/native_20261012_r6/templates/llava/test_deferred_native.py",
-      "sha256": "1479297828190e61ad6ec3610d7d10d772a22ea99660e9ca0c3248ffd7a3d113",
-      "bytes": 1324
+      "sha256": "5ec7dcb562f74d6d782713d9ccad646ce77ed02124134c5a321b21d61e9c246f",
+      "bytes": 2318
     },
     {
       "path": "revisions/native_20261012_r6/templates/llava/worker.py",
