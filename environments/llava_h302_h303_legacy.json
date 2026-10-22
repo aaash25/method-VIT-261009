@@ -29,5 +29,7 @@
     "assistant_suffix_trailing_space": false
   },
   "recorded_reference_source_sha256": "e52c6e56857f2ca986c8a3c3ca6c6c70043142236387a4ae640d4a6bdc803b2c",
-  "provenance": "Frozen LLaVA environment lock based on user terminal observation on2026-09-28; recovered H302 formal runtime records match these recorded versions"
+  "provenance": "Frozen LLaVA environment lock based on user terminal observation on2026-09-28; recovered H302 formal runtime records match these recorded versions",
+  "normative_status": "Historical observation only; user-selected canonical AIC Smol reference supersedes the prior dual-profile interpretation",
+  "accepted_for_current_campaign_by_environment_alone": false
 }

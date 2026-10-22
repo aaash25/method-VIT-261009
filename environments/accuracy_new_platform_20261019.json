@@ -38,5 +38,7 @@
   "timing_stage": false,
   "original_methods_preserved": true,
   "extra_image_validation": "skipped by user request",
-  "provenance": "Reference collected from the original admitted new-platform GPU; exact22 package versions aligned on the later instances; Python patch differences retained"
+  "provenance": "Reference collected from the original admitted new-platform GPU; exact22 package versions aligned on the later instances; Python patch differences retained",
+  "normative_status": "Historical observation only; user-selected canonical AIC Smol reference supersedes the prior dual-profile interpretation",
+  "accepted_for_current_campaign_by_environment_alone": false
 }
