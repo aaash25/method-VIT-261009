@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "scope": "Historical H302/H303 LLaVA native acceptance environment; not a universal dependency lock for every model",
+  "python": "3.11.16",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "sentencepiece": "0.2.2",
+    "protobuf": "7.36.2",
+    "triton": "3.1.0",
+    "accelerate": "1.14.0",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2",
+    "setuptools": "84.0.0"
+  },
+  "policy": {
+    "batch_size": 1,
+    "attention": "eager",
+    "tf32": false,
+    "threads": 2,
+    "deterministic_algorithms": false,
+    "tokenizer_use_fast": true,
+    "model_id": "llava-hf/llava-1.5-7b-hf",
+    "model_revision": "b234b804b114d9e37bb655e11cbbb5f5e971b7a9",
+    "assistant_suffix_trailing_space": false
+  },
+  "recorded_reference_source_sha256": "e52c6e56857f2ca986c8a3c3ca6c6c70043142236387a4ae640d4a6bdc803b2c",
+  "provenance": "Frozen LLaVA environment lock based on user terminal observation on2026-09-28; recovered H302 formal runtime records match these recorded versions"
+}
