@@ -4499,7 +4499,8 @@
     "all_historical_freeze_pins_match_current_capture": true,
     "earlier_environment_lock_recorded_packages": 13,
     "complete_129_package_historical_snapshot_proven": false,
-    "current_129_package_capture_is_not_backdated": true
+    "current_129_package_capture_is_not_backdated": true,
+    "all_15_original_formal_source_hashes_match_current_interpreter": true
   },
   "numerical_contract": {
     "attention_backend": "eager",
@@ -4527,7 +4528,33 @@
   "full_record_limits": [
     "Current OS/driver observation is not retroactively a frozen historical OS image.",
     "Hardware differences were authorized; record them and perform native admission.",
-    "Historical subset is54 pins; later current packages are recorded separately, without invented historical versions.",
-    "Native torch build probe initially timed out; supplemental capture is recorded separately."
-  ]
+    "Historical subset is54 pins; later current packages are recorded separately, without invented historical versions."
+  ],
+  "torch_build": {
+    "torch": "2.5.1+cu121",
+    "compiled_cuda": "12.1",
+    "build": "PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201703\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.5.3 (Git Hash 66f0cb9eb66affd2da3bf5f8d897376f04aae6af)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX512\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.1, CUDNN_VERSION=9.1.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.5.1, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=1, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, \n",
+    "parallel": "ATen/Parallel:\n\tat::get_num_threads() : 2\n\tat::get_num_interop_threads() : 64\nOpenMP 201511 (a.k.a. OpenMP 4.5)\n\tomp_get_max_threads() : 2\nIntel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n\tmkl_get_max_threads() : 2\nIntel(R) MKL-DNN v3.5.3 (Git Hash 66f0cb9eb66affd2da3bf5f8d897376f04aae6af)\nstd::thread::hardware_concurrency() : 128\nEnvironment variables:\n\tOMP_NUM_THREADS : 2\n\tMKL_NUM_THREADS : 2\nATen parallel backend: OpenMP\n",
+    "cudnn": 90100,
+    "cuda_initialized": false,
+    "cpu_only": true
+  },
+  "original_runtime_source_files_currently_matching": {
+    "PIL/Image.py": "04af3f2db7ffdd61e829fa7aa8f5481d394a0a4129a8fd8aa5b13908928fcd6d",
+    "torch/version.py": "bea3bf621af40ac2df88e5f627314282bc590ff8b0d8c10e2f750bda85e3be6a",
+    "transformers/generation/configuration_utils.py": "d83f2281f939402be1633a29f3c760e29f5d2f284258d8ed99693b873744074b",
+    "transformers/generation/logits_process.py": "6481506629ff6f021157e893fc64c4e7b5b06a72072771809d679387cb54a4b1",
+    "transformers/generation/stopping_criteria.py": "495628e4c877f667fbbd9ed4cc83b680de9eac2abc97ec3903f6e9219af3ecd2",
+    "transformers/generation/utils.py": "55fd5c50aa785e226afa03e4507b8d27c0328714c0bd048bc60af9e8813a1173",
+    "transformers/modeling_attn_mask_utils.py": "a0810cef6b0d6093bfdaa349b3adde2e633fd3a6be5073d80b5e08b2f12c354b",
+    "transformers/modeling_utils.py": "bf1c6b2a43cf7c36fb79f37c981424dd6ae78eb863fcaa5d2a37e76c9828611d",
+    "transformers/models/llama/modeling_llama.py": "31bf660a663259134324bc65da4e155951dc89c5ca46471d2325a9938e859e26",
+    "transformers/models/smolvlm/configuration_smolvlm.py": "e171e43fa6871de04e18ea0b367f3b02e029e5cb1f6295a8f10296f13adab982",
+    "transformers/models/smolvlm/image_processing_smolvlm.py": "48b63221cf9662b830fa0ffeb000c42668733e1005c30dd16d656afcfe8d1ec7",
+    "transformers/models/smolvlm/modeling_smolvlm.py": "2ea6741e7861d53c751a9c66960963bff81d3b6650df0ea99ca5ca9e3a3f90fb",
+    "transformers/models/smolvlm/processing_smolvlm.py": "2c4b634206ef5fbe8595faea90720dd7631327ea3f8175abd34306fa541bfabb",
+    "transformers/processing_utils.py": "6c29de5c3fc674cf21ba6377a39cbafb2ba3e4bc2d1202d4b944f8cf840e6f33",
+    "transformers/tokenization_utils_base.py": "a2d62f7e5d58f908b3a2d0b24ce6329e1e52c815082cedde29a5c007a23e7e83"
+  },
+  "torch_probe_history": "Initial45s timeout preserved; separate180s CPU-only probe completed with exit0 and no CUDA context."
 }
